@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Module Six</title>
+<meta name="description" content="Privacy policy for Module Six, explaining how we collect, use, and protect your personal data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628;--navy-mid:#112240;
+  --blue:#2563a8;--blue-mid:#3b7dd8;
+  --teal-light:#5dcaa5;
+  --white:#ffffff;--off-white:#f7f9fc;
+  --grey-100:#eef1f6;--grey-200:#d8dde8;
+  --text:#0a1628;--text-2:#4a5568;--text-3:#8896ab;
+  --r-md:10px;--r-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo img{width:32px;height:32px}
+.nav-logo-text{font-size:17px;font-weight:400;color:var(--white);letter-spacing:-0.01em}
+.nav-logo-text span{font-weight:600}
+.nav-back{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:rgba(255,255,255,0.8)}
+
+/* HERO */
+.pp-hero{background:var(--navy);padding:120px 24px 72px;position:relative;overflow:hidden}
+.pp-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.pp-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.pp-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);margin-bottom:16px}
+.pp-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,48px);font-weight:400;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.pp-hero-meta{font-size:14px;color:rgba(255,255,255,.35);line-height:1.6}
+.pp-hero-meta strong{color:rgba(255,255,255,.5);font-weight:500}
+
+/* CONTENT */
+.pp-content{max-width:760px;margin:0 auto;padding:72px 24px 96px}
+
+.pp-section{margin-bottom:56px}
+.pp-section:last-child{margin-bottom:0}
+
+.pp-section h2{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--text);line-height:1.2;letter-spacing:-.01em;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--grey-100)}
+
+.pp-section h3{font-size:17px;font-weight:600;color:var(--text);margin-bottom:10px;margin-top:28px}
+.pp-section h3:first-child{margin-top:0}
+
+.pp-section p{font-size:16px;line-height:1.75;color:var(--text-2);margin-bottom:14px}
+.pp-section p:last-child{margin-bottom:0}
+
+.pp-section ul,.pp-section ol{padding-left:0;list-style:none;margin-bottom:14px}
+.pp-section ul li,.pp-section ol li{font-size:16px;line-height:1.75;color:var(--text-2);padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--grey-100)}
+.pp-section ul li:last-child,.pp-section ol li:last-child{border-bottom:none}
+.pp-section ul li::before{content:'';position:absolute;left:0;top:15px;width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.pp-section ol{counter-reset:ol-counter}
+.pp-section ol li{counter-increment:ol-counter}
+.pp-section ol li::before{content:counter(ol-counter);position:absolute;left:0;top:6px;font-size:13px;font-weight:600;color:var(--blue)}
+
+.pp-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:15px}
+.pp-table th{text-align:left;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:10px 14px;background:var(--off-white);border:1px solid var(--grey-200)}
+.pp-table td{padding:12px 14px;border:1px solid var(--grey-200);color:var(--text-2);vertical-align:top;line-height:1.6}
+.pp-table tr:nth-child(even) td{background:var(--off-white)}
+
+.pp-callout{background:var(--off-white);border-left:3px solid var(--blue);border-radius:0 var(--r-md) var(--r-md) 0;padding:18px 20px;margin-bottom:20px}
+.pp-callout p{font-size:15px;color:var(--text-2);margin-bottom:0}
+.pp-callout strong{color:var(--text);font-weight:600}
+
+.pp-contact{background:var(--navy);border-radius:var(--r-lg);padding:32px;margin-top:48px}
+.pp-contact h3{font-size:18px;font-weight:600;color:var(--white);margin-bottom:12px}
+.pp-contact p{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:8px;line-height:1.6}
+.pp-contact p:last-child{margin-bottom:0}
+.pp-contact a{color:var(--teal-light);text-decoration:none}
+.pp-contact a:hover{text-decoration:underline}
+
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* FOOTER */
+footer{background:var(--navy);padding:40px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.footer-logo img{width:26px;height:26px}
+.footer-logo-text{font-size:15px;font-weight:400;color:rgba(255,255,255,.55)}
+.footer-logo-text span{font-weight:600}
+.footer-links{display:flex;gap:20px;list-style:none}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.6)}
+.footer-disc{max-width:760px;margin:16px auto 0;padding:0 24px;font-size:12px;color:rgba(255,255,255,.15);line-height:1.6}
+
+@media(max-width:600px){
+  .pp-content{padding:48px 20px 72px}
+  nav{padding:0 16px}
+  .pp-table{font-size:13px}
+  .pp-table th,.pp-table td{padding:9px 10px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="logo.png" alt="Module Six">
+    <span class="nav-logo-text">module <span>six</span></span>
+  </a>
+  <a href="/" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.5 7H2.5m4-4L2.5 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to home
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="pp-hero">
+  <div class="pp-hero-inner">
+    <div class="pp-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="pp-hero-meta">
+      <strong>Last updated: April 2026</strong><br>
+      This policy explains how Module Six collects, uses, and protects your personal data when you use our website and learning app.
+    </p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="pp-content">
+
+  <!-- 1. WHO WE ARE -->
+  <div class="pp-section">
+    <h2>1. Who we are</h2>
+    <p>Module Six is operated as a sole trader business based in England. We provide an online learning app at <a href="https://app.modulesix.co.uk">app.modulesix.co.uk</a> and a marketing website at <a href="https://modulesix.co.uk">modulesix.co.uk</a>.</p>
+    <p>For the purposes of UK data protection law, Module Six is the data controller responsible for your personal data.</p>
+    <div class="pp-callout">
+      <p><strong>Contact:</strong> You can reach us at <a href="mailto:hello@modulesix.co.uk">hello@modulesix.co.uk</a> for any questions about this policy or how we handle your data.</p>
+    </div>
+  </div>
+
+  <!-- 2. WHAT DATA WE COLLECT -->
+  <div class="pp-section">
+    <h2>2. What data we collect</h2>
+    <p>We collect only the data we need to provide the service. We do not collect more than is necessary.</p>
+
+    <h3>Account data</h3>
+    <p>When you create an account, we collect your name and email address. This is required to identify your account and send you essential communications such as payment receipts.</p>
+
+    <h3>Payment data</h3>
+    <p>If you make a purchase, payments are processed by Stripe. We do not receive or store your full card number, expiry date, or CVV. Stripe provides us with a token reference confirming a successful payment, along with the last four digits of your card and card type for your records. Stripe's own privacy policy applies to the data they process: <a href="https://stripe.com/gb/privacy" target="_blank" rel="noopener">stripe.com/gb/privacy</a>.</p>
+
+    <h3>Usage data</h3>
+    <p>The app records your progress through the course: which topics you have completed, your question scores, and your overall readiness percentage. This data is stored against your account and used solely to power your personal dashboard and readiness report.</p>
+
+    <h3>Data you do not provide</h3>
+    <p>We do not use analytics tools, advertising trackers, or any third-party scripts that collect browsing behaviour. We do not use cookies beyond those strictly necessary for the app to function.</p>
+  </div>
+
+  <!-- 3. LEGAL BASIS -->
+  <div class="pp-section">
+    <h2>3. Why we process your data and our legal basis</h2>
+    <p>Under UK GDPR, we must have a lawful basis for processing your personal data. The table below sets out what we process, why, and on what basis.</p>
+
+    <table class="pp-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Purpose</th>
+          <th>Lawful basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name and email address</td>
+          <td>Creating and managing your account</td>
+          <td>Contract: necessary to perform the service you have signed up for</td>
+        </tr>
+        <tr>
+          <td>Email address</td>
+          <td>Sending payment receipts and essential service communications</td>
+          <td>Contract: necessary to perform the service</td>
+        </tr>
+        <tr>
+          <td>Payment token from Stripe</td>
+          <td>Confirming your purchase and unlocking paid content</td>
+          <td>Contract: necessary to perform the service</td>
+        </tr>
+        <tr>
+          <td>Progress and score data</td>
+          <td>Powering your dashboard, readiness report, and revision queue</td>
+          <td>Contract: necessary to deliver the core functionality of the app</td>
+        </tr>
+        <tr>
+          <td>Email address</td>
+          <td>Responding to support enquiries</td>
+          <td>Legitimate interests: responding to direct requests you have made</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do not use your data for marketing purposes without your explicit consent. We do not send promotional emails unless you have opted in.</p>
+  </div>
+
+  <!-- 4. HOW LONG WE KEEP IT -->
+  <div class="pp-section">
+    <h2>4. How long we keep your data</h2>
+    <p>We keep your account data for as long as your account is active. If you request deletion of your account, we will delete your personal data within 30 days, except where we are required by law to retain certain records.</p>
+    <p>Payment records, including the Stripe transaction reference and the amount paid, are retained for six years in accordance with UK tax and accounting obligations.</p>
+    <p>Progress and score data is deleted when your account is deleted.</p>
+  </div>
+
+  <!-- 5. THIRD PARTIES -->
+  <div class="pp-section">
+    <h2>5. Third parties we share data with</h2>
+    <p>We share your data only where necessary to provide the service. We do not sell your data. We do not share your data with advertisers.</p>
+
+    <table class="pp-table">
+      <thead>
+        <tr>
+          <th>Third party</th>
+          <th>Purpose</th>
+          <th>Data shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Stripe</strong></td>
+          <td>Payment processing</td>
+          <td>Name, email address, payment card details. Stripe processes this data under their own privacy policy and as a data processor acting on our behalf.</td>
+        </tr>
+        <tr>
+          <td><strong>Cloudflare</strong></td>
+          <td>Website and app hosting, content delivery</td>
+          <td>IP address and request data as part of normal web infrastructure. Cloudflare's privacy policy applies: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No other third parties receive your personal data.</p>
+  </div>
+
+  <!-- 6. DATA STORAGE -->
+  <div class="pp-section">
+    <h2>6. Where your data is stored</h2>
+    <p>Your account and progress data is stored on servers within the UK and European Economic Area (EEA). Cloudflare operates a global network but contractually commits to GDPR-compliant data handling.</p>
+    <p>Stripe is a US-based company. They are certified under the EU-US Data Privacy Framework and use Standard Contractual Clauses to ensure an adequate level of protection for personal data transferred outside the UK and EEA.</p>
+  </div>
+
+  <!-- 7. YOUR RIGHTS -->
+  <div class="pp-section">
+    <h2>7. Your rights</h2>
+    <p>Under UK GDPR you have the following rights regarding your personal data. To exercise any of these rights, contact us at <a href="mailto:hello@modulesix.co.uk">hello@modulesix.co.uk</a>. We will respond within one month.</p>
+
+    <ul>
+      <li><strong>Right of access.</strong> You can request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification.</strong> You can ask us to correct inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure.</strong> You can ask us to delete your personal data. We will do so within 30 days, subject to any legal obligations to retain certain records.</li>
+      <li><strong>Right to restrict processing.</strong> You can ask us to pause processing of your data in certain circumstances, for example while a correction is being made.</li>
+      <li><strong>Right to data portability.</strong> You can request your personal data in a structured, machine-readable format so you can transfer it elsewhere.</li>
+      <li><strong>Right to object.</strong> You can object to processing based on legitimate interests. We will stop unless we have compelling grounds to continue.</li>
+      <li><strong>Rights related to automated decision-making.</strong> We do not make any automated decisions that produce legal or similarly significant effects about you.</li>
+    </ul>
+
+    <p>If you are not satisfied with how we handle your data, you have the right to complain to the Information Commissioner's Office (ICO), the UK supervisory authority for data protection.</p>
+    <p>ICO website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a><br>
+    ICO helpline: 0303 123 1113</p>
+  </div>
+
+  <!-- 8. COOKIES -->
+  <div class="pp-section">
+    <h2>8. Cookies</h2>
+    <p>We use cookies only where strictly necessary for the app to function. This includes session cookies that keep you logged in while you use the app. We do not use advertising cookies, tracking cookies, or any cookies from third-party advertising networks.</p>
+    <p>Because we use only strictly necessary cookies, we are not required to request your consent for them under PECR (Privacy and Electronic Communications Regulations). No cookie banner is shown because there is nothing optional to consent to.</p>
+  </div>
+
+  <!-- 9. CHILDREN -->
+  <div class="pp-section">
+    <h2>9. Children</h2>
+    <p>Module Six is intended for adults. We do not knowingly collect personal data from anyone under the age of 18. If you believe a child has provided us with personal data, please contact us at <a href="mailto:hello@modulesix.co.uk">hello@modulesix.co.uk</a> and we will delete it promptly.</p>
+  </div>
+
+  <!-- 10. CHANGES -->
+  <div class="pp-section">
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this policy from time to time. When we do, we will update the date at the top of this page. If we make a significant change that affects how we use your personal data, we will notify you by email.</p>
+    <p>Continued use of the app after a policy update constitutes acceptance of the updated terms.</p>
+  </div>
+
+  <!-- CONTACT BOX -->
+  <div class="pp-contact">
+    <h3>Questions about this policy?</h3>
+    <p>If you have any questions about how we handle your data, or if you want to exercise any of your rights, get in touch.</p>
+    <p>Email: <a href="mailto:hello@modulesix.co.uk">hello@modulesix.co.uk</a></p>
+    <p>We aim to respond to all data-related requests within one month as required by UK GDPR.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">
+      <img src="logo.png" alt="Module Six">
+      <span class="footer-logo-text">module <span>six</span></span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="https://app.modulesix.co.uk">Open the app</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+      <li><a href="mailto:hello@modulesix.co.uk">Contact</a></li>
+    </ul>
+  </div>
+  <p class="footer-disc">Module Six is an independently produced learning product. It is not affiliated with, endorsed by, or officially connected to the Association for Project Management. APM and PFQ are registered trademarks of the Association for Project Management.</p>
+</footer>
+
+</body>
+</html>
