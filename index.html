@@ -722,7 +722,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <ul class="footer-links">
         <li><a href="https://app.modulesix.co.uk">Open the app</a></li>
         <li><a href="/privacy">Privacy policy</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#422a272e2e2d022f2d26372e27312b3a6c212d6c3729">Contact</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-bottom">
@@ -731,7 +731,12 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
 }
