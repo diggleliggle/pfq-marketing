@@ -676,7 +676,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Flashcard revision</li>
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Offline access</li>
         </ul>
-        <a href="#" onclick="goToFullAccess(); return false;" class="pr-btn pr-mid">Unlock a module</a>
+        <a href="#" onclick="goToUnlockModule(); return false;" class="pr-btn pr-mid">Unlock a module</a>
       </div>
 
       <div class="pr-card featured fade-up d2">
@@ -693,7 +693,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline, installs on any device</li>
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Permanent access, no subscription</li>
         </ul>
-        <a href="#" onclick="goToFullAccess(); return false;" class="pr-btn pr-main">Get full access</a>
+        <a href="#" onclick="goToGetFullAccess(); return false;" class="pr-btn pr-main">Get full access</a>
       </div>
 
     </div>
@@ -749,16 +749,26 @@ function startLearning() {
     : 'https://app.modulesix.co.uk';
 }
 
-function goToFullAccess() {
+function goToUnlockModule() {
   window.location.href = isMobile()
-    ? 'https://m.modulesix.co.uk'
+    ? 'https://m.modulesix.co.uk/?screen=pricing'
     : 'https://app.modulesix.co.uk/pricing.html';
+}
+
+function goToGetFullAccess() {
+  window.location.href = isMobile()
+    ? 'https://m.modulesix.co.uk/?screen=signup'
+    : 'https://app.modulesix.co.uk/signup.html';
 }
 
 function goToSignIn() {
   window.location.href = isMobile()
     ? 'https://m.modulesix.co.uk'
     : 'https://app.modulesix.co.uk/signin.html';
+}
+
+function goToFullAccess() {
+  goToGetFullAccess();
 }
 </script>
 </body>
