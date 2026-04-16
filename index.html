@@ -25,8 +25,8 @@ body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;color:var(
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo-img{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.nav-logo-img img{width:32px;height:32px;object-fit:contain}
+.nav-logo-img{width:32px;height:32px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:2px}
+.nav-logo-img img{width:28px;height:28px}
 .nav-logo-text{font-size:17px;font-weight:400;color:var(--white);letter-spacing:-0.01em}
 .nav-logo-text span{font-weight:700;color:#4a9eff}
 .nav-right{display:flex;align-items:center;gap:16px}
@@ -50,6 +50,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;d
 .hero-sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.6);margin-bottom:36px;font-weight:300}
 .hero-sub strong{color:rgba(255,255,255,.9);font-weight:500}
 .hero-note{font-size:14px;color:rgba(255,255,255,.35);margin-top:14px}
+.hero-name-row{display:flex;align-items:center;gap:0;margin-bottom:16px;max-width:340px}
+.hero-name-input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-right:none;border-radius:var(--r-md) 0 0 var(--r-md);padding:13px 18px;font-size:15px;color:white;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
+.hero-name-input::placeholder{color:rgba(255,255,255,.3)}
+.hero-name-input:focus{border-color:rgba(74,158,255,.5);background:rgba(255,255,255,.1)}
+.hero-name-btn{background:var(--blue);color:white;border:none;border-radius:0 var(--r-md) var(--r-md) 0;padding:13px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;white-space:nowrap}
+.hero-name-btn:hover{background:var(--blue-mid)}
 .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--white);text-decoration:none;font-size:16px;font-weight:500;padding:15px 32px;border-radius:var(--r-md);transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 24px rgba(37,99,168,.35)}
 .btn-primary:hover{background:var(--blue-mid);transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,99,168,.45)}
@@ -302,8 +308,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
 .footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
 .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.footer-logo-img{width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.footer-logo-img img{width:28px;height:28px;object-fit:contain}
+.footer-logo-img{width:28px;height:28px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:2px}
+.footer-logo-img img{width:24px;height:24px}
 .footer-logo-text{font-size:16px;font-weight:400;color:rgba(255,255,255,.65)}
 .footer-logo-text span{font-weight:700;color:#4a9eff}
 .footer-links{display:flex;gap:24px;list-style:none}
@@ -360,13 +366,17 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="hero-inner">
     <div>
       <div class="hero-badge"><div class="hero-dot"></div>APM PFQ exam preparation</div>
+      <p style="font-size:14px;color:rgba(255,255,255,.4);margin-bottom:16px;font-weight:400">For project managers and aspiring project managers sitting the APM Project Fundamentals Qualification.</p>
       <h1>Pass the APM PFQ.<br><em>Understand the subject properly.</em></h1>
       <p class="hero-sub">Module Six is a structured learning app built around the full PFQ syllabus. <strong>Six modules, 75 topics, 385 practice questions,</strong> and a readiness report that tells you when you're genuinely ready to sit the exam.</p>
       <div class="hero-actions">
-        <a href="#" onclick="startLearning(); return false;" class="btn-primary">Start learning free <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M3 8h10m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-
+        <div class="hero-name-row">
+          <input type="text" class="hero-name-input" id="hero-name" placeholder="What's your name?" maxlength="30" autocomplete="off">
+          <button class="hero-name-btn" onclick="heroStart()">Start free →</button>
+        </div>
+        <a href="#" id="hero-cta" onclick="startLearning(); return false;" class="btn-primary" style="display:none">Start learning free <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M3 8h10m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#features" class="btn-ghost-light">See what's included <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle"><path d="M7 2v10m-4-4 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <p class="hero-note">Try your first lesson free. No account required.</p>
+        <p class="hero-note" id="hero-note">Enter your name and we'll personalise your experience. No account required to start.</p>
       </div>
       <div class="hero-stats">
         <div><div class="hs-num">75</div><div class="hs-label">topics</div></div>
@@ -413,8 +423,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div class="fade-up d2">
         <div class="pq">
           <span class="pq-mark">&ldquo;</span>
-          <p class="pq-text">The exam tests whether you understand how project management works in practice, not whether you can recall a definition.</p>
-          <p class="pq-attr">What the APM PFQ actually demands</p>
+          <p class="pq-text">Project management is the application of processes, methods, skills, knowledge and experience to achieve specific project objectives.</p>
+          <p class="pq-attr">APM Body of Knowledge, 7th edition</p>
         </div>
       </div>
     </div>
@@ -510,7 +520,49 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         </ul>
       </div>
     </div>
-    <p class="modes-note fade-up">You can switch between modes at any time. <strong>Both modes cover identical content and lead to the same qualification outcome.</strong><br>Reading preferences — including dark mode, background tint, and an OpenDyslexic font option — are available on all screens.</p>
+    <p class="modes-note fade-up">You can switch between modes at any time. <strong>Both modes cover identical content and lead to the same qualification outcome.</strong></p>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section style="background:var(--off-white);border-top:1px solid var(--grey-100);border-bottom:1px solid var(--grey-100);padding:72px 24px">
+  <div class="si">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="s-label" style="text-align:center">Early feedback</div>
+      <h2 class="s-heading" style="text-align:center;margin-bottom:0">What learners say.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
+        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div>
+            <div style="font-size:12px;color:var(--text-3)">Role · Organisation</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
+        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div>
+            <div style="font-size:12px;color:var(--text-3)">Role · Organisation</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
+        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div>
+            <div style="font-size:12px;color:var(--text-3)">Role · Organisation</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -738,6 +790,24 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+function heroStart() {
+  const name = document.getElementById('hero-name').value.trim();
+  if (!name) { startLearning(); return; }
+  const url = isMobile()
+    ? `https://m.modulesix.co.uk/?name=${encodeURIComponent(name)}`
+    : `https://app.modulesix.co.uk/?name=${encodeURIComponent(name)}`;
+  window.location.href = url;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('hero-name');
+  if (input) {
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') heroStart();
+    });
+  }
+});
 
 function isMobile() {
   return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
