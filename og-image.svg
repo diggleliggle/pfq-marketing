@@ -1,0 +1,114 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow1" cx="85%" cy="10%" r="40%">
+      <stop offset="0%" stop-color="#2563a8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2563a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="5%" cy="90%" r="35%">
+      <stop offset="0%" stop-color="#1d9e75" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1d9e75" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Subtle grid -->
+  <path d="M0 60h1200M0 120h1200M0 180h1200M0 240h1200M0 300h1200M0 360h1200M0 420h1200M0 480h1200M0 540h1200M0 600h1200M60 0v630M120 0v630M180 0v630M240 0v630M300 0v630M360 0v630M420 0v630M480 0v630M540 0v630M600 0v630M660 0v630M720 0v630M780 0v630M840 0v630M900 0v630M960 0v630M1020 0v630M1080 0v630M1140 0v630" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="160" width="4" height="310" fill="#3b7dd8" rx="2"/>
+
+  <!-- Badge -->
+  <rect x="104" y="158" width="260" height="32" rx="16" fill="rgba(37,99,168,0.25)" stroke="rgba(74,158,255,0.4)" stroke-width="1"/>
+  <circle cx="122" cy="174" r="5" fill="#5dcaa5"/>
+  <text x="136" y="179" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#90c4ff" letter-spacing="0.08em">APM PFQ EXAM PREPARATION</text>
+
+  <!-- Main heading -->
+  <text x="104" y="252" font-family="Georgia, serif" font-size="64" font-weight="400" fill="#ffffff" letter-spacing="-0.02em">Pass the APM PFQ.</text>
+  <text x="104" y="328" font-family="Georgia, serif" font-size="56" font-weight="400" fill="#4a9eff" font-style="italic" letter-spacing="-0.02em">Understand it properly.</text>
+
+  <!-- Subtext -->
+  <text x="104" y="386" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.55)">Six modules. 75 topics. 385 practice questions.</text>
+  <text x="104" y="414" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.55)">A readiness report that tells you when you're ready.</text>
+
+  <!-- Divider -->
+  <rect x="104" y="448" width="480" height="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Stats -->
+  <rect x="104" y="468" width="140" height="62" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="174" y="496" font-family="Georgia, serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">75</text>
+  <text x="174" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="middle">topics</text>
+
+  <rect x="256" y="468" width="140" height="62" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="326" y="496" font-family="Georgia, serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">385</text>
+  <text x="326" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="middle">questions</text>
+
+  <rect x="408" y="468" width="160" height="62" rx="8" fill="rgba(37,99,168,0.2)" stroke="rgba(74,158,255,0.25)" stroke-width="1"/>
+  <text x="488" y="496" font-family="Georgia, serif" font-size="28" font-weight="400" fill="#4a9eff" text-anchor="middle">£14.99</text>
+  <text x="488" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="rgba(74,158,255,0.7)" text-anchor="middle">intro price</text>
+
+  <!-- Right panel: module list -->
+  <rect x="720" y="80" width="400" height="470" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Module rows -->
+  <rect x="730" y="90" width="380" height="64" rx="10" fill="rgba(37,99,168,0.2)" stroke="rgba(74,158,255,0.2)" stroke-width="1"/>
+  <circle cx="760" cy="122" r="13" fill="#2563a8"/>
+  <text x="760" y="127" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <text x="784" y="117" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.9)">Foundations of Project Management</text>
+  <text x="784" y="134" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">9 topics</text>
+
+  <g opacity="0.6">
+    <rect x="730" y="164" width="380" height="56" rx="8" fill="rgba(255,255,255,0.03)"/>
+    <circle cx="760" cy="192" r="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="760" y="197" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.4)" text-anchor="middle">2</text>
+    <text x="784" y="188" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.55)">Roles, Governance and Structure</text>
+    <text x="784" y="204" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.3)">9 topics</text>
+  </g>
+
+  <g opacity="0.45">
+    <rect x="730" y="230" width="380" height="56" rx="8" fill="rgba(255,255,255,0.03)"/>
+    <circle cx="760" cy="258" r="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="760" y="263" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle">3</text>
+    <text x="784" y="254" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Defining the Project</text>
+    <text x="784" y="270" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.25)">13 topics</text>
+  </g>
+
+  <g opacity="0.35">
+    <rect x="730" y="296" width="380" height="56" rx="8" fill="rgba(255,255,255,0.02)"/>
+    <circle cx="760" cy="324" r="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="760" y="329" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.25)" text-anchor="middle">4</text>
+    <text x="784" y="320" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.3)">Planning the Project</text>
+    <text x="784" y="336" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">16 topics</text>
+  </g>
+
+  <g opacity="0.25">
+    <rect x="730" y="362" width="380" height="56" rx="8" fill="rgba(255,255,255,0.02)"/>
+    <circle cx="760" cy="390" r="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <text x="760" y="395" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.2)" text-anchor="middle">5</text>
+    <text x="784" y="386" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.22)">Delivering and Controlling</text>
+    <text x="784" y="402" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.15)">16 topics</text>
+  </g>
+
+  <g opacity="0.18">
+    <rect x="730" y="428" width="380" height="56" rx="8" fill="rgba(255,255,255,0.02)"/>
+    <circle cx="760" cy="456" r="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <text x="760" y="461" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.15)" text-anchor="middle">6</text>
+    <text x="784" y="452" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.18)">Value, Outcomes and Closure</text>
+    <text x="784" y="468" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.12)">12 topics</text>
+  </g>
+
+  <!-- Fade overlay on right panel bottom -->
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <rect x="720" y="400" width="410" height="160" fill="url(#fade)" rx="0"/>
+
+  <!-- Domain -->
+  <text x="104" y="592" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="rgba(255,255,255,0.25)" letter-spacing="0.05em">modulesix.co.uk</text>
+</svg>
