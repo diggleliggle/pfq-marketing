@@ -31,13 +31,13 @@ html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo-img{width:32px;height:32px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:2px}
-.nav-logo-img img{width:28px;height:28px}
+.nav-logo-img{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-img img{width:32px;height:32px;display:block;border-radius:50%}
 .nav-logo-text{font-size:17px;font-weight:400;color:var(--white);letter-spacing:-0.01em}
 .nav-logo-text span{font-weight:700;color:#4a9eff}
 .nav-right{display:flex;align-items:center;gap:16px}
-.nav-link{font-size:14px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .2s}
-.nav-link:hover{color:rgba(255,255,255,0.8)}
+.nav-link{font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color .2s}
+.nav-link:hover{color:rgba(255,255,255,1)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--white);text-decoration:none;font-size:14px;font-weight:500;padding:9px 20px;border-radius:var(--r-md);transition:background .2s,transform .15s}
 .nav-cta:hover{background:var(--blue-mid);transform:translateY(-1px)}
 section{padding:96px 24px}
@@ -179,8 +179,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
 .footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
 .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.footer-logo-img{width:28px;height:28px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:2px}
-.footer-logo-img img{width:24px;height:24px}
+.footer-logo-img{width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-logo-img img{width:28px;height:28px;display:block;border-radius:50%}
 .footer-logo-text{font-size:16px;font-weight:400;color:rgba(255,255,255,.65)}
 .footer-logo-text span{font-weight:700;color:#4a9eff}
 .footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
@@ -391,6 +391,48 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.75"/><path d="M11 7v4l3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
         <h3>Annual cohort renewal</h3>
         <p>All seats expire on the same date, which aligns with training budget cycles and makes renewal straightforward. Each year's cohort follows the same structured path. The pathway becomes part of how your organisation develops project professionals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);border-top:1px solid var(--grey-100)">
+  <div class="si">
+    <div class="fade-up" style="max-width:680px;margin:0 auto 8px;text-align:center">
+      <div class="s-label">Inclusion and accessibility</div>
+      <h2 class="s-heading">A learning tool that works for<br><em>every person on your team.</em></h2>
+      <p class="s-body" style="max-width:580px;margin:0 auto 56px">Project teams are diverse. Module Six is built to reflect that. Every learner gets the same content and the same qualification outcome — what changes is how it is delivered. Learners choose the experience that works for them, without having to declare anything or ask for adjustments.</p>
+    </div>
+    <div class="feat-grid fade-up" style="max-width:960px;margin:0 auto">
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M4 7h10M4 15h7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <h3>Focus mode</h3>
+        <p>Delivers content one section at a time with no sidebars, no competing links, and a clear progress indicator throughout. Designed with ADHD and anxiety in mind, but chosen by learners of all kinds who prefer a linear, distraction-free path.</p>
+      </div>
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 7h10M5 11h12M7 15h8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <h3>OpenDyslexic font</h3>
+        <p>Learners can switch to OpenDyslexic at any time from their profile. The setting persists across sessions and devices. No forms, no disclosure, no separate process — just a preference a learner can set and forget.</p>
+      </div>
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.75"/><circle cx="11" cy="11" r="3" fill="currentColor"/></svg></div>
+        <h3>Background tints</h3>
+        <p>Five background colour options — white, cream, yellow, peach, and pale blue — reduce the visual stress of reading on screen. Particularly useful for learners with Irlen syndrome or visual processing differences.</p>
+      </div>
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8 5c0 0 1-1 3-1s3 1 3 1M6 9h10l-1 8H7L6 9z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9v8M13 9v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Audio summaries</h3>
+        <p>Every module has a spoken summary — two to three minutes of clearly narrated key points. Learners who process information better through listening can use audio as their primary revision tool, not an afterthought.</p>
+      </div>
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.75"/><path d="M11 7v4l2 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <h3>Self-paced, no time pressure</h3>
+        <p>Learners move at their own pace with no countdown timers, no session limits, and no performance warnings in learning mode. The mock exam is timed because the real exam is — everything else is fully self-directed.</p>
+      </div>
+      <div class="fc">
+        <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.75"/><path d="M7 11l3 3 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>WCAG 2.1 AA compliant</h3>
+        <p>Both the web app and phone PWA are built to WCAG 2.1 AA accessibility standards — keyboard navigation, screen reader support, sufficient colour contrast, and no reliance on colour alone to convey meaning.</p>
       </div>
     </div>
   </div>
