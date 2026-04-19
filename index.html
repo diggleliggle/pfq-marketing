@@ -573,7 +573,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .nav-link{display:none}
   .nav-cta-ghost{display:none} /* hide For teams ghost in nav on mobile, it's in the hero */
   .nav-cta{display:none} /* hide Get free access, founder box handles this */
-  #nav-teams-btn{display:none} /* hide For organisations on mobile */
+  #nav-teams-btn{display:none !important} /* hide For organisations on mobile */
 
   /* Hero */
   .hero{padding:28px 18px 48px}
@@ -655,6 +655,9 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .calibrate-ind{padding:28px 22px}
   .ci-heading{font-size:clamp(17px,5vw,22px)}
   .ci-cta{width:100%;justify-content:center}
+  .prod-card-link.c{width:100%;justify-content:center;box-sizing:border-box}
+  .orgs-cta-primary{width:100%;justify-content:center;box-sizing:border-box}
+  #see-team-options-btn{width:100% !important;justify-content:center;box-sizing:border-box;white-space:normal}
 
   /* Pricing tabs */
   .pr-tabs{width:100%;border-radius:var(--r-md)}
@@ -726,7 +729,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
           <div class="teams-callout__headline">Equipping a team?</div>
           <div class="teams-callout__sub">Groundwork for learning. Calibrate for competency tracking and CPD. Team pricing, admin dashboard, invoice billing.</div>
         </div>
-        <a href="teams.html" style="display:inline-flex;align-items:center;gap:7px;background:white;color:var(--blue);text-decoration:none;font-size:13px;font-weight:500;padding:9px 18px;border-radius:var(--r-md);transition:background .2s;white-space:nowrap;flex-shrink:0" onmouseover="this.style.background='#f0f6ff'" onmouseout="this.style.background='white'">See team options <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a id="see-team-options-btn" href="teams.html" style="display:inline-flex;align-items:center;gap:7px;background:white;color:var(--blue);text-decoration:none;font-size:13px;font-weight:500;padding:9px 18px;border-radius:var(--r-md);transition:background .2s;white-space:nowrap;flex-shrink:0" onmouseover="this.style.background='#f0f6ff'" onmouseout="this.style.background='white'">See team options <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
       <div class="hero-actions-secondary">
