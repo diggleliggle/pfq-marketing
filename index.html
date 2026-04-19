@@ -446,7 +446,9 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   section{padding:56px 18px}
   nav{padding:0 16px}
   .nav-link{display:none}
-  .nav-cta-ghost{display:none} /* hide For teams ghost in nav on mobile — it's in the hero */
+  .nav-cta-ghost{display:none}
+  .nav-cta{display:none} /* hide Get free access — founder box handles this */
+  .founder-banner{display:none} /* redundant on mobile — founder box in hero covers it */
 
   /* Hero */
   .hero{padding:28px 18px 48px}
@@ -464,7 +466,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .founder-box__headline{font-size:17px}
   .founder-box__sub{font-size:13px}
   .founder-code__value{font-size:13px;padding:5px 10px}
-  .founder-btn{font-size:14px;padding:12px 20px}
+  .founder-btn{font-size:14px;padding:12px 20px;width:100%;justify-content:center;margin-left:0!important}
+  .founder-code{flex-wrap:wrap}
 
   /* Teams callout */
   .teams-callout{flex-direction:column;align-items:flex-start;gap:14px;padding:16px}
