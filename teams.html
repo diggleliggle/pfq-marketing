@@ -3,32 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Module Six for Teams | APM PFQ for Your Whole Team</title>
-<meta name="description" content="Give your team a structured, self-paced path to the APM PFQ. Progress tracking, CPD records, admin dashboard, invoice billing. From £39 per seat.">
+<title>Module Six for Organisations | Groundwork and Calibrate for Your Team</title>
+<meta name="description" content="Give your team structured project management learning through Groundwork, and competency tracking through Calibrate. Progress data, CPD records, admin dashboard, invoice billing.">
 <link rel="canonical" href="https://modulesix.co.uk/teams">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://modulesix.co.uk/teams">
-<meta property="og:title" content="Module Six for Teams | APM PFQ Preparation">
-<meta property="og:description" content="Give your team a structured path to the APM PFQ. Progress tracking, CPD records, admin dashboard. From £39 per seat.">
+<meta property="og:title" content="Module Six for Organisations | Both products for your team">
+<meta property="og:description" content="Groundwork for structured learning. Calibrate for competency tracking and CPD. One seat licence, both products, invoice billing.">
 <meta property="og:image" content="https://modulesix.co.uk/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://modulesix.co.uk/og-image.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<!-- Design tokens: single source of truth for all Module Six surfaces -->
+<link rel="stylesheet" href="/tokens.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0a1628;--navy-mid:#112240;--navy-light:#1a3357;
-  --blue:#2563a8;--blue-mid:#3b7dd8;--blue-bright:#4a9eff;
-  --teal:#1d9e75;--teal-light:#5dcaa5;
-  --white:#ffffff;--off-white:#f7f9fc;
-  --grey-100:#eef1f6;--grey-200:#d8dde8;--grey-400:#8896ab;
-  --text:#0a1628;--text-2:#4a5568;--text-3:#8896ab;
-  --r-sm:6px;--r-md:10px;--r-lg:16px;--r-xl:24px;
+  --navy:       var(--ms6-navy);
+  --navy-mid:   var(--ms6-navy-mid);
+  --navy-light: var(--ms6-navy-light);
+  --blue:       var(--ms6-blue);
+  --blue-mid:   var(--ms6-blue-mid);
+  --blue-bright:var(--ms6-blue-bright);
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-sans);font-size:16px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo-img{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -43,7 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;d
 section{padding:96px 24px}
 .si{max-width:1100px;margin:0 auto}
 .s-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
-.s-heading{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,42px);font-weight:400;line-height:1.15;color:var(--text);letter-spacing:-.02em;margin-bottom:20px}
+.s-heading{font-family:var(--font-display);font-size:clamp(30px,4vw,42px);font-weight:400;line-height:1.15;color:var(--text);letter-spacing:-.02em;margin-bottom:20px}
 .s-heading em{font-style:italic;color:var(--blue)}
 .s-body{font-size:17px;line-height:1.7;color:var(--text-2)}
 .s-body p+p{margin-top:16px}
@@ -65,13 +63,13 @@ section{padding:96px 24px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,168,.2);border:1px solid rgba(74,158,255,.3);color:#90c4ff;font-size:13px;font-weight:500;padding:6px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:.02em}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-light);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,54px);font-weight:400;line-height:1.12;color:var(--white);margin-bottom:20px;letter-spacing:-.02em}
+.hero h1{font-family:var(--font-display);font-size:clamp(36px,5vw,54px);font-weight:400;line-height:1.12;color:var(--white);margin-bottom:20px;letter-spacing:-.02em}
 .hero h1 em{font-style:italic;color:var(--blue-bright)}
 .hero-sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.6);margin-bottom:36px;font-weight:300}
 .hero-sub strong{color:rgba(255,255,255,.9);font-weight:500}
 .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .hero-stats{display:flex;gap:28px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.08)}
-.hs-num{font-family:'DM Serif Display',serif;font-size:32px;color:var(--white);line-height:1;margin-bottom:4px}
+.hs-num{font-family:var(--font-display);font-size:32px;color:var(--white);line-height:1;margin-bottom:4px}
 .hs-label{font-size:13px;color:rgba(255,255,255,.35)}
 
 /* DASHBOARD */
@@ -82,7 +80,7 @@ section{padding:96px 24px}
 .dash-body{padding:18px}
 .dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
 .dash-kpi{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px}
-.dash-kpi-n{font-family:'DM Serif Display',serif;font-size:22px;color:var(--white);line-height:1;margin-bottom:2px}
+.dash-kpi-n{font-family:var(--font-display);font-size:22px;color:var(--white);line-height:1;margin-bottom:2px}
 .dash-kpi-l{font-size:10px;color:rgba(255,255,255,.3)}
 .dash-rows-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:8px}
 .dash-row{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px 12px;margin-bottom:6px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
@@ -105,7 +103,7 @@ section{padding:96px 24px}
 .outcome-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .outcome-card.biz .outcome-label{color:#90c4ff}
 .outcome-card.ind .outcome-label{color:var(--teal-light)}
-.outcome-card h3{font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;color:var(--white);margin-bottom:16px;line-height:1.2}
+.outcome-card h3{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--white);margin-bottom:16px;line-height:1.2}
 .outcome-list{list-style:none;display:flex;flex-direction:column;gap:11px}
 .outcome-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.6}
 .outcome-card.biz .outcome-list li{color:rgba(255,255,255,.65)}
@@ -134,7 +132,7 @@ section{padding:96px 24px}
 .s-pricing{background:var(--navy);position:relative;overflow:hidden}
 .pr-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .pr-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,168,.15) 0%,transparent 70%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
-.pr-heading{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,42px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:14px;text-align:center}
+.pr-heading{font-family:var(--font-display);font-size:clamp(30px,4vw,42px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:14px;text-align:center}
 .pr-sub{font-size:17px;color:rgba(255,255,255,.45);text-align:center;max-width:500px;margin:0 auto 56px;line-height:1.6}
 .pr-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;max-width:960px;margin:0 auto;position:relative;z-index:1}
 .pr-card{border-radius:var(--r-xl);padding:36px 30px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);display:flex;flex-direction:column}
@@ -142,7 +140,7 @@ section{padding:96px 24px}
 .pr-card.featured::before{content:'Most popular';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 14px;border-radius:100px;white-space:nowrap}
 .pr-lbl{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
 .pr-card.featured .pr-lbl{color:#90c4ff}
-.pr-amount{font-family:'DM Serif Display',serif;font-size:44px;color:var(--white);line-height:1;margin-bottom:2px}
+.pr-amount{font-family:var(--font-display);font-size:44px;color:var(--white);line-height:1;margin-bottom:2px}
 .pr-per{font-size:14px;color:rgba(255,255,255,.35);margin-bottom:4px}
 .pr-note{font-size:13px;color:rgba(255,255,255,.28);margin-bottom:22px}
 .pr-div{height:1px;background:rgba(255,255,255,.06);margin-bottom:20px}
@@ -192,7 +190,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 @media(max-width:960px){
   .hero-inner,.two-col,.outcome-grid,.faq-grid{grid-template-columns:1fr;gap:40px}
   .hero-visual{order:-1}
-  .pr-cards{grid-template-columns:1fr;max-width:420px}
+  .pr-cards{grid-template-columns:1fr !important;max-width:420px}
   .pr-card.featured::before{display:none}
   .footer-top{flex-direction:column;align-items:flex-start}
 }
@@ -202,6 +200,14 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   nav{padding:0 16px}
   .nav-link{display:none}
   .feat-grid{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap;gap:20px}
+  .pr-card{padding:24px 18px}
+  .pr-amount{font-size:32px}
+  .pr-heading{font-size:clamp(24px,6vw,34px)}
+  .pr-sub{font-size:15px;margin-bottom:32px}
+  .outcome-card{padding:24px}
+  .faq-item{padding:18px 0}
+  .faq-q{font-size:15px}
 }
 </style>
 </head>
@@ -213,7 +219,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <span class="nav-logo-text">module <span>six</span></span>
   </a>
   <div class="nav-right">
-    <a href="/" class="nav-link">For individuals</a>
+    <a href="/" class="nav-link">Groundwork</a>
+    <a href="https://calibrate.modulesix.co.uk" class="nav-link">Calibrate</a>
     <a href="#pricing" class="nav-link">Pricing</a>
     <a href="#contact" class="nav-cta">Get a quote <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 7h9m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
@@ -224,17 +231,17 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="hero-bg"><div class="hb1"></div><div class="hb2"></div><div class="hb-grid"></div></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge"><div class="hero-dot"></div>Module Six for Teams</div>
+      <div class="hero-badge"><div class="hero-dot"></div>Module Six for Organisations</div>
       <h1>Build project management capability <em>across your organisation.</em></h1>
-      <p class="hero-sub">Module Six gives your team a structured, self-paced path to the APM Project Fundamentals Qualification. <strong>Evidence of learning, CPD records, and exam readiness</strong> — all in one place.</p>
+      <p class="hero-sub">Two products, one seat licence. <strong>Groundwork</strong> gives your team a structured path through project management knowledge. <strong>Calibrate</strong> tracks their competency development and CPD — and gives you the data to have meaningful development conversations.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get a quote <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M3 8h10m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#outcomes" class="btn-ghost-light">See what's included <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle"><path d="M7 2v10m-4-4 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div class="hero-stats">
         <div><div class="hs-num">75</div><div class="hs-label">topics covered</div></div>
-        <div><div class="hs-num">385</div><div class="hs-label">practice questions</div></div>
-        <div><div class="hs-num">£39</div><div class="hs-label">per seat from</div></div>
+        <div><div class="hs-num">41</div><div class="hs-label">competency elements</div></div>
+        <div><div class="hs-num">2</div><div class="hs-label">products, one seat</div></div>
       </div>
     </div>
     <div style="display:flex;justify-content:center;align-items:center">
@@ -278,8 +285,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="si" style="position:relative;z-index:1">
     <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 56px">
       <div class="s-label" style="color:var(--teal-light);text-align:center">What you are investing in</div>
-      <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,40px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:16px;line-height:1.15">Value for the organisation.<br><em style="color:var(--blue-bright)">Development for the individual.</em></h2>
-      <p style="font-size:17px;color:rgba(255,255,255,.45);line-height:1.6">A classroom PFQ course costs £500 to £1,200 per person and takes your team out of the office for two days. Module Six costs a fraction of that, fits around a working week, and produces evidence you can actually use.</p>
+      <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,40px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:16px;line-height:1.15">Value for the organisation.<br><em style="color:var(--blue-bright)">Development for the individual.</em></h2>
+      <p style="font-size:17px;color:rgba(255,255,255,.45);line-height:1.6">One seat covers both products. Your people build project management knowledge through Groundwork and track their competency development through Calibrate. You get visibility across the team. They get a professional development record that moves with them.</p>
     </div>
     <div class="outcome-grid fade-up">
       <div class="outcome-card biz">
@@ -287,21 +294,21 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <h3>Measurable capability development at scale.</h3>
         <ul class="outcome-list">
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A consistent baseline of project management knowledge across the team, not dependent on which provider or trainer individuals happened to use</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Progress data usable in performance reviews, talent conversations, and L&amp;D reporting — not just a pass or fail at exam day</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Documented evidence of structured learning investment that supports APM membership applications and professional body requirements</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>An annual licence that renews cohort by cohort, giving you a repeatable onboarding pathway for new project professionals year on year</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Cost per learner that is a fraction of classroom training, with none of the scheduling overhead or time out of the office</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Organisation-wide competency data from Calibrate: see capability gaps across the team, not just individual progress scores</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Evidence for performance reviews, talent conversations, and L&amp;D reporting — structured and exportable, not just self-reported</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Line managers get a tool to run meaningful development conversations backed by evidence, not just impression</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#90c4ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>An annual licence that renews cohort by cohort, giving you a repeatable onboarding pathway for new project professionals</li>
         </ul>
       </div>
       <div class="outcome-card ind">
         <div class="outcome-label">For the individual</div>
-        <h3>A qualification, a record, and real understanding.</h3>
+        <h3>Learning, evidence, and a record that's theirs.</h3>
         <ul class="outcome-list">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Structured preparation for the APM PFQ across 75 topics with practice questions, a mock exam, and a readiness report showing when they are genuinely ready to sit</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A topic-level progress record that maps to the APM competency framework, usable directly as evidence in a CPD log or personal development plan</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Structured learning across 75 topics with practice questions, a mock exam, and a readiness report — preparation for professional qualifications including the APM PFQ</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A Calibrate competency profile and CPD log that builds over time — evidence of what they can do, not just what they have studied</li>
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>The flexibility to study around work, on any device, at their own pace — Standard and Focus modes to suit different ways of working</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Content that builds practical understanding alongside exam knowledge: each topic connects theory to how real projects are planned, delivered, and closed</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A clear, honest picture of strengths and gaps before the exam — not just encouragement, but scored evidence of where more work is needed</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Content that builds practical understanding alongside knowledge: each topic connects theory to how real projects are planned, delivered, and closed</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A professional development record they own — the Calibrate record is theirs and continues even if they move on from your organisation</li>
         </ul>
       </div>
     </div>
@@ -314,39 +321,39 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <div class="two-col">
       <div class="fade-up">
         <div class="s-label">CPD and professional development</div>
-        <h2 class="s-heading">Structured learning that counts<br><em>towards APM CPD.</em></h2>
+        <h2 class="s-heading">Structured learning that builds<br><em>a real CPD record.</em></h2>
         <div class="s-body">
-          <p>The APM framework for continuing professional development uses five questions: where am I now, where do I want to be, how will I get there, how am I doing, and what next. Module Six helps individuals answer all five clearly and with evidence.</p>
-          <p>Completing Module Six constitutes formal structured learning under the APM CPD framework. Each topic completed, each practice question answered, and each module checkpoint passed is a recorded, evidenced learning activity that can be logged directly against a CPD record or personal development plan.</p>
-          <p>For organisations where staff maintain APM membership or are working towards APMP and beyond, Module Six provides a documented starting point. Progress reports are exportable and give individuals the dates, topics, and assessment scores they need to complete their CPD log entries accurately.</p>
+          <p>Professional CPD frameworks — including APM's — ask five questions: where am I now, where do I want to be, how will I get there, how am I doing, and what next. Groundwork and Calibrate together give individuals clear, evidenced answers to all five.</p>
+          <p>Completing Groundwork constitutes formal structured learning under recognised CPD frameworks. Each topic completed, each practice question answered, and each module checkpoint passed is a recorded, evidenced learning activity. Calibrate captures that evidence alongside self-assessed competency levels, making it usable directly in development conversations and professional body records.</p>
+          <p>For organisations where staff are working towards professional qualifications or membership, both products provide a documented starting point. Progress from Groundwork and competency records from Calibrate are exportable, giving individuals the dates, topics, and evidence they need for accurate CPD entries.</p>
         </div>
       </div>
       <div class="fade-up d2">
         <div class="cpd-questions">
           <div class="cpd-q answered">
-            <div class="cpd-q-num">APM CPD question 1</div>
+            <div class="cpd-q-num">CPD question 1</div>
             <div class="cpd-q-text">Where am I now?</div>
             <div class="cpd-q-answer">The exam readiness report maps performance across all 75 topics, showing precisely where each learner is confident and where gaps remain.</div>
           </div>
           <div class="cpd-q answered">
-            <div class="cpd-q-num">APM CPD question 2</div>
+            <div class="cpd-q-num">CPD question 2</div>
             <div class="cpd-q-text">Where do I want to be?</div>
-            <div class="cpd-q-answer">A clear, specific goal: pass the APM PFQ and build the foundation to progress towards APMP and beyond.</div>
+            <div class="cpd-q-answer">A clear, specific goal: complete Groundwork, sit a professional qualification, and build the foundation for further development.</div>
           </div>
           <div class="cpd-q answered">
-            <div class="cpd-q-num">APM CPD question 3</div>
+            <div class="cpd-q-num">CPD question 3</div>
             <div class="cpd-q-text">How will I get there?</div>
             <div class="cpd-q-answer">Six modules, 75 topics, spaced repetition, and a full mock exam. A structured path from first topic to exam day, with nothing left to chance.</div>
           </div>
           <div class="cpd-q answered">
-            <div class="cpd-q-num">APM CPD question 4</div>
+            <div class="cpd-q-num">CPD question 4</div>
             <div class="cpd-q-text">How am I doing?</div>
             <div class="cpd-q-answer">The admin dashboard gives you and the learner an up-to-date picture of progress at any point. The monthly summary covers the whole cohort.</div>
           </div>
           <div class="cpd-q">
-            <div class="cpd-q-num">APM CPD question 5</div>
+            <div class="cpd-q-num">CPD question 5</div>
             <div class="cpd-q-text">What next?</div>
-            <div class="cpd-q-answer">Once the PFQ is passed, the foundation is in place for APMP, specialist qualifications, and further structured development. Module Six is the starting point.</div>
+            <div class="cpd-q-answer">With Groundwork complete and a Calibrate profile in place, the foundation is there for specialist qualifications and continued structured development. Both products are the starting point.</div>
           </div>
         </div>
       </div>
@@ -370,12 +377,12 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div class="fc fade-up d1">
         <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="4" stroke="currentColor" stroke-width="1.75"/><path d="M4 19c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
         <h3>Competency frameworks</h3>
-        <p>The PFQ syllabus maps directly to the APM competency framework at foundation level. Topic-level completion records give structured evidence against specific competencies, useful for role progression conversations and formal competency assessments.</p>
+        <p>Groundwork's curriculum maps to recognised competency frameworks at foundation level. Calibrate goes further — learners self-assess against 8 competency areas and 41 elements, with line manager endorsement of evidence. Together they give structured, evidenced data for competency reviews and role progression conversations.</p>
       </div>
       <div class="fc fade-up d2">
         <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="5" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M7 5V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M8 11h6M8 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <h3>CPD logs and records</h3>
-        <p>Module Six is formal structured learning under the APM CPD framework. Learners can record completed modules and topics in their APM CPD log. Progress exports provide the dates, topics, and assessment scores needed for a complete and accurate entry.</p>
+        <p>Groundwork is formal structured learning that can be recorded against a professional CPD log. Calibrate provides the dedicated tool for it: a structured CPD log with activity types, reflections, and evidence entries that satisfies the requirements of most professional bodies. Progress exports from Groundwork provide dates, topics, and assessment scores for accurate entries.</p>
       </div>
       <div class="fc fade-up">
         <div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 14l4-4 3 3 4-5 4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -442,58 +449,45 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 <section class="s-pricing" id="pricing">
   <div class="pr-bg"></div><div class="pr-glow"></div>
   <div class="si" style="position:relative;z-index:1">
-    <h2 class="pr-heading fade-up">Team pricing.</h2>
-    <p class="pr-sub fade-up">All plans include the full syllabus, admin dashboard, progress reporting, and invoice billing. Seats are valid for 12 months from the date of purchase.</p>
-    <div class="pr-cards">
+    <h2 class="pr-heading fade-up">One seat. Both products.</h2>
+    <p class="pr-sub fade-up">Every seat covers Groundwork and Calibrate. Your team gets structured learning and a competency tracker. You get a single licence, one invoice, and one admin dashboard.</p>
+    <div class="pr-cards" style="grid-template-columns:1fr 1fr;max-width:760px">
+
       <div class="pr-card fade-up">
-        <div class="pr-lbl">Team</div>
-        <div class="pr-amount">£49</div>
-        <div class="pr-per">per seat</div>
-        <div class="pr-note">5 to 19 seats</div>
+        <div class="pr-lbl">Per seat</div>
+        <div class="pr-amount" style="font-size:32px;padding-top:4px">Custom</div>
+        <div class="pr-per">per seat · per year</div>
+        <div class="pr-note">5 or more seats · Invoice billing available</div>
         <div class="pr-div"></div>
         <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All 6 modules, 75 topics, 385 questions</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Mock exam and readiness report</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Admin dashboard and progress tracking</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly progress summary email</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Groundwork — full access, all 6 modules</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Calibrate — competency self-assessment and CPD log</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Evidence records and development plan</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Admin dashboard, progress reporting</li>
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Seat reassignment within licence period</li>
           <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Invoice billing, 30-day terms</li>
         </ul>
         <a href="#contact" class="pr-btn pr-ghost">Get a quote</a>
       </div>
+
       <div class="pr-card featured fade-up d1">
-        <div class="pr-lbl">Business</div>
-        <div class="pr-amount">£39</div>
-        <div class="pr-per">per seat</div>
-        <div class="pr-note">20 or more seats</div>
-        <div class="pr-div"></div>
-        <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Team</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>CSV export of all progress and CPD data</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Branded welcome email for learners</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Onboarding call for admin</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority support</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Invoice billing, 30-day terms</li>
-        </ul>
-        <a href="#contact" class="pr-btn pr-main">Get a quote</a>
-      </div>
-      <div class="pr-card fade-up d2">
-        <div class="pr-lbl">Enterprise</div>
-        <div class="pr-amount" style="font-size:32px;padding-top:6px">Talk to us</div>
+        <div class="pr-lbl">Also included free</div>
+        <div class="pr-amount" style="font-size:26px;padding-top:8px;line-height:1.2">Reviewer and admin seats</div>
         <div class="pr-per">&nbsp;</div>
-        <div class="pr-note">100 or more seats</div>
+        <div class="pr-note">Don't count against your seat allocation</div>
         <div class="pr-div"></div>
         <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Business</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>SSO (Google Workspace, Entra ID)</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom reporting</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated onboarding support</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Flexible billing arrangements</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Line manager reviewer access — endorse evidence, confirm competency levels, log reviews</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Admin access — invite team, assign reviewers, view organisation heatmap</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Individual, team, and organisation reports</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>SSO available for larger deployments</li>
+          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>CSV export, custom reporting on request</li>
         </ul>
-        <a href="#contact" class="pr-btn pr-ghost">Get in touch</a>
+        <a href="#contact" class="pr-btn pr-main">Talk to us</a>
       </div>
+
     </div>
-    <p class="pr-context fade-up"><strong>All licences run for 12 months from the date of purchase.</strong> Seats can be reassigned within the licence period. All seats expire on the same date, aligning with annual training budget and review cycles.</p>
+    <p class="pr-context fade-up"><strong>Pricing is per seat, per year.</strong> Get in touch with your team size and we'll come back with pricing, a sample invoice, and a one-pager for internal sign-off. All within one working day.</p>
   </div>
 </section>
 
@@ -507,45 +501,45 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <div class="faq-grid">
       <div>
         <div class="faq-item fade-up">
-          <div class="faq-q">Does completing Module Six count as formal CPD?</div>
-          <div class="faq-a">Yes. Completing structured online learning is a recognised CPD activity under the APM framework. Learners can record completed topics and modules in their APM CPD log with dates and assessment scores as supporting evidence.</div>
+          <div class="faq-q">Does completing Groundwork count as formal CPD?</div>
+          <div class="faq-a">Yes. Completing structured online learning is a recognised CPD activity under most professional frameworks. Learners can record completed topics and modules in their CPD log with dates and assessment scores as supporting evidence. Calibrate provides a dedicated tool for logging and structuring that record.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">Can progress records be used in appraisals or competency reviews?</div>
-          <div class="faq-a">Yes. Topic-level progress and readiness scores give line managers concrete, evidenced data for performance reviews, PDPs, and competency framework assessments. Progress data can be exported as CSV for use in your own systems.</div>
+          <div class="faq-a">Yes. Groundwork gives topic-level progress and readiness scores. Calibrate adds self-assessed competency levels, evidence records, and line manager endorsements. Together they give line managers concrete, structured data for performance reviews, PDPs, and competency assessments. Progress data can be exported as CSV for use in your own systems.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">Is there a minimum order?</div>
-          <div class="faq-a">The Team tier starts at five seats. If you need fewer, get in touch and we can discuss options.</div>
+          <div class="faq-a">We typically work with teams of five or more. If you need fewer seats, get in touch and we can discuss options.</div>
         </div>
         <div class="faq-item fade-up">
-          <div class="faq-q">What happens when a learner finishes?</div>
-          <div class="faq-a">Their account stays active until the licence expires. They can revisit the revision hub, retake the mock exam, and access their full progress record for the remainder of the 12 months.</div>
+          <div class="faq-q">What happens when a learner finishes Groundwork?</div>
+          <div class="faq-a">Their Groundwork account stays active until the licence expires — they can revisit the revision hub, retake the mock exam, and access their full progress record. Their Calibrate account continues beyond the licence as their personal professional development record.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">How does seat reassignment work?</div>
-          <div class="faq-a">If a team member leaves, reassign their seat to a new starter from the admin dashboard. The new learner inherits the remaining time on that seat. All seats in an order expire on the same date.</div>
+          <div class="faq-a">If a team member leaves, reassign their Groundwork seat to a new starter from the admin dashboard. The new learner inherits the remaining time on that seat. All seats in an order expire on the same date.</div>
         </div>
       </div>
       <div>
         <div class="faq-item fade-up">
-          <div class="faq-q">Is the content aligned to the APM competency framework?</div>
-          <div class="faq-a">The content is built from APM source material and covers the full PFQ syllabus, which maps to the APM competency framework at foundation level. It is the right starting point for practitioners working towards APMP and beyond.</div>
+          <div class="faq-q">What does Calibrate add for organisations?</div>
+          <div class="faq-a">Calibrate gives you structured competency tracking across the team — self-assessments against 8 areas and 41 elements, evidence submissions, line manager endorsements, and an organisation-wide capability heatmap. It replaces spreadsheet-based skills matrices with something structured and evidence-backed.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">Do you offer invoicing?</div>
-          <div class="faq-a">Yes. All team orders are invoiced. We accept BACS on 30-day terms and include a PO number field on the invoice.</div>
+          <div class="faq-a">Yes. All organisation orders are invoiced. We accept BACS on 30-day terms and include a PO number field on the invoice.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">How long does setup take?</div>
-          <div class="faq-a">Once an order is confirmed, access codes are issued within one working day. Learners can start immediately after redeeming their code. No IT configuration required.</div>
+          <div class="faq-a">Once an order is confirmed, we provision your organisation within one working day. Learners can start immediately after accepting their invite. No IT configuration required for most deployments.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">What data do you hold on learners?</div>
-          <div class="faq-a">Name, work email, and progress data. Data is stored securely and is not shared with third parties. Full details are in our privacy policy.</div>
+          <div class="faq-a">Name, work email, progress data, and the CPD and evidence records they create in Calibrate. Data is stored securely and is not shared with third parties. Full details are in our privacy policy.</div>
         </div>
         <div class="faq-item fade-up">
-          <div class="faq-q">What if we need SSO or more than 99 seats?</div>
+          <div class="faq-q">What if we need SSO or a large deployment?</div>
           <div class="faq-a">Get in touch. SSO is available for larger orders alongside custom reporting and dedicated onboarding support.</div>
         </div>
       </div>
@@ -560,7 +554,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="contact-inner" style="text-align:center">
     <div class="fade-up">
       <div class="s-label" style="color:var(--teal-light);text-align:center">Get a quote</div>
-      <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,40px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:14px">Ready to get started?</h2>
+      <h2 style="font-family:var(--font-display);font-size:clamp(30px,4vw,40px);font-weight:400;color:var(--white);letter-spacing:-.02em;margin-bottom:14px">Ready to get started?</h2>
       <p style="font-size:17px;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto">Email us with the number of seats you need and when you're looking to start. We'll come back to you within one working day with pricing, a sample invoice, and a one-pager for internal sign-off.</p>
       <a href="mailto:hello@modulesix.co.uk?subject=Team%20licence%20enquiry" class="btn-primary" style="display:inline-flex;margin-bottom:24px">
         Email hello@modulesix.co.uk
@@ -582,14 +576,15 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <span class="footer-logo-text">module <span>six</span></span>
       </a>
       <ul class="footer-links">
-        <li><a href="/">For individuals</a></li>
-        <li><a href="#pricing">Team pricing</a></li>
+        <li><a href="/">Groundwork</a></li>
+        <li><a href="https://calibrate.modulesix.co.uk">Calibrate</a></li>
+        <li><a href="#pricing">Organisation pricing</a></li>
         <li><a href="/privacy">Privacy policy</a></li>
         <li><a href="mailto:hello@modulesix.co.uk">Contact</a></li>
       </ul>
     </div>
     <div class="footer-bottom">
-      <p class="footer-disc">Module Six is an independently produced learning product. It is not affiliated with, endorsed by, or officially connected to the Association for Project Management. APM and PFQ are registered trademarks of the Association for Project Management.</p>
+      <p class="footer-disc">Module Six is an independently produced learning and professional development platform. Module Six is not affiliated with, endorsed by, or officially connected to the Association for Project Management. APM and PFQ are registered trademarks of the Association for Project Management.</p>
     </div>
   </div>
 </footer>

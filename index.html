@@ -386,6 +386,59 @@ section{padding:96px 24px}
 .pr-context{text-align:center;font-size:14px;color:rgba(255,255,255,.28);margin-top:36px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;position:relative;z-index:1}
 .pr-context strong{color:rgba(255,255,255,.45)}
 
+/* PRICING TABS */
+.pr-tabs{display:flex;gap:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:4px;margin:0 auto 52px;width:fit-content;position:relative;z-index:1}
+.pr-tab{font-size:14px;font-weight:500;color:rgba(255,255,255,.45);background:transparent;border:none;padding:9px 24px;border-radius:var(--r-md);cursor:pointer;font-family:var(--font-sans);transition:all .2s;white-space:nowrap}
+.pr-tab.active{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.pr-tab:hover:not(.active){color:rgba(255,255,255,.7)}
+.pr-panel{display:none;position:relative;z-index:1}
+.pr-panel.active{display:block}
+.pr-individual{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:0 auto}
+.pr-product-block{display:flex;flex-direction:column;gap:14px}
+.pr-product-heading{display:flex;align-items:center;gap:8px;margin-bottom:4px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.07)}
+.pr-product-heading-text{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.pr-product-heading-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.pr-product-heading-dot.blue{background:var(--blue-bright)}
+.pr-product-heading-dot.teal{background:var(--teal-light)}
+.pr-card-sm{border-radius:var(--r-xl);padding:26px 28px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);display:flex;flex-direction:column}
+.pr-card-sm.featured-blue{background:rgba(37,99,168,.14);border-color:rgba(74,158,255,.3)}
+.pr-card-sm.featured-teal{background:rgba(29,158,117,.1);border-color:rgba(29,158,117,.25)}
+.pr-card-sm.founder-sm{border:2px solid rgba(74,158,255,.28);background:rgba(37,99,168,.1)}
+.pr-card-sm-lbl{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px}
+.pr-card-sm.featured-blue .pr-card-sm-lbl,.pr-card-sm.founder-sm .pr-card-sm-lbl{color:#90c4ff}
+.pr-card-sm.featured-teal .pr-card-sm-lbl{color:var(--teal-light)}
+.pr-card-sm-amount{font-family:var(--font-display);font-size:34px;color:var(--white);line-height:1;margin-bottom:3px}
+.pr-card-sm.founder-sm .pr-card-sm-amount{color:var(--blue-bright)}
+.pr-card-sm.featured-teal .pr-card-sm-amount{color:var(--teal-light)}
+.pr-card-sm-note{font-size:12px;color:rgba(255,255,255,.28);margin-bottom:14px;line-height:1.5}
+.pr-card-sm.featured-blue .pr-card-sm-note,.pr-card-sm.founder-sm .pr-card-sm-note{color:rgba(74,158,255,.5)}
+.pr-card-sm.featured-teal .pr-card-sm-note{color:rgba(93,202,165,.5)}
+.pr-card-sm .pr-div{height:1px;background:rgba(255,255,255,.06);margin-bottom:14px}
+.pr-card-sm .pr-feats{margin-bottom:18px;flex:1}
+.pr-card-sm .pr-feats li{font-size:12px;color:rgba(255,255,255,.5);gap:8px}
+.pr-card-sm.featured-blue .pr-feats li,.pr-card-sm.founder-sm .pr-feats li,.pr-card-sm.featured-teal .pr-feats li{color:rgba(255,255,255,.75)}
+.pr-card-sm .pr-btn{font-size:13px;padding:10px 16px;margin-top:auto}
+.pr-btn-teal{background:var(--teal);color:white;border:none;cursor:pointer;font-family:var(--font-sans)}
+.pr-btn-teal:hover{background:#18856a;transform:translateY(-1px)}
+.pr-sub-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:7px;text-align:center;line-height:1.5}
+.pr-org-card{border-radius:var(--r-xl);padding:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:860px;margin:0 auto}
+.pr-org-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.pr-org-amount{font-family:var(--font-display);font-size:44px;color:var(--white);line-height:1;margin-bottom:6px}
+.pr-org-period{font-size:14px;color:rgba(255,255,255,.35);margin-bottom:22px}
+.pr-org-body{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:26px}
+.pr-org-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--navy);text-decoration:none;font-size:14px;font-weight:500;padding:12px 24px;border-radius:var(--r-md);transition:background .2s,transform .15s}
+.pr-org-cta:hover{background:var(--off-white);transform:translateY(-1px)}
+.pr-org-includes{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px}
+.pr-org-feats{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.pr-org-feats li{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+.pr-org-feats svg{flex-shrink:0;margin-top:2px}
+.pr-org-note{font-size:12px;color:rgba(255,255,255,.28);line-height:1.6}
+.pr-org-note a{color:rgba(255,255,255,.4);text-decoration:underline}
+@media(max-width:700px){
+  .pr-individual{grid-template-columns:1fr}
+  .pr-org-card{grid-template-columns:1fr;gap:28px;padding:28px 22px}
+}
+
 /* FINAL CTA */
 .s-cta{background:var(--off-white);text-align:center;padding:120px 24px}
 .cta-inner{max-width:600px;margin:0 auto}
@@ -601,6 +654,13 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .ci-heading{font-size:clamp(17px,5vw,22px)}
   .ci-cta{width:100%;justify-content:center}
 
+  /* Pricing tabs */
+  .pr-tabs{width:100%;border-radius:var(--r-md)}
+  .pr-tab{flex:1;padding:9px 12px;font-size:13px;text-align:center}
+  .pr-card-sm{padding:20px 18px}
+  .pr-card-sm-amount{font-size:28px}
+  .pr-org-card{grid-template-columns:1fr;gap:28px;padding:28px 20px}
+
   /* Footer */
   .footer-top{flex-direction:column;align-items:flex-start}
   .footer-links{flex-wrap:wrap;gap:16px}
@@ -793,9 +853,10 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="prod-card-stats">
           <div><div class="prod-stat-n">41</div><div class="prod-stat-l">competency elements</div></div>
           <div><div class="prod-stat-n">8</div><div class="prod-stat-l">framework areas</div></div>
-          <div><div class="prod-stat-n">Free</div><div class="prod-stat-l">individual tier</div></div>
+          <div><div class="prod-stat-n">Free*</div><div class="prod-stat-l">year one for all</div></div>
         </div>
-        <a href="https://calibrate.modulesix.co.uk" class="prod-card-link c">Try Calibrate free <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://calibrate.modulesix.co.uk" class="prod-card-link c">Start Calibrate — free year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p style="font-size:11px;color:var(--text-3);margin-top:8px">*Free for year one. £19.99/year from year two. No card required to start.</p>
         <a href="teams.html" class="prod-card-link-ghost" style="color:var(--text-3)">Teams and organisations</a>
       </div>
 
@@ -1064,64 +1125,137 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 <section class="s-pricing" id="pricing">
   <div class="pr-bg"></div><div class="pr-glow"></div>
   <div class="si" style="position:relative;z-index:1">
-    <h2 class="pr-heading fade-up">Simple pricing. No surprises.</h2>
-    <p class="pr-sub fade-up">First 1,000 learners get full access free with code FOUNDER1000. After that, unlock a module or go all in. No subscriptions, no renewals.</p>
-    <div class="pr-cards">
+    <h2 class="pr-heading fade-up">Simple pricing.<br>Both products.</h2>
+    <p class="pr-sub fade-up">Groundwork to learn. Calibrate to track your competency and CPD. Pick what you need, or use both.</p>
 
-      <!-- Founder card -->
-      <div class="pr-card-founder fade-up">
-        <div class="pr-lbl">Founder access</div>
-        <div class="pr-amount-free">Free</div>
-        <div class="pr-note">First 1,000 learners only</div>
-        <div class="pr-div"></div>
-        <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All 6 modules, all 75 topics</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>385 practice questions</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Mock exam and readiness report</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Permanent access, no expiry</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>No payment details required</li>
-        </ul>
-        <a href="#" onclick="startLearning(); return false;" class="pr-btn pr-founder-btn">Claim free access</a>
-        <div class="promo-input-wrap" style="margin-top:12px;text-align:center">
-          <p style="font-size:12px;color:rgba(93,202,165,.7);margin-top:6px">Use code <strong>FOUNDER1000</strong> at the pricing screen</p>
+    <div class="pr-tabs fade-up">
+      <button class="pr-tab active" onclick="showPricing('individual',this)">For individuals</button>
+      <button class="pr-tab" onclick="showPricing('org',this)">For organisations</button>
+    </div>
+
+    <!-- INDIVIDUAL -->
+    <div class="pr-panel active" id="pr-individual">
+      <div class="pr-individual">
+
+        <!-- Groundwork column -->
+        <div class="pr-product-block">
+          <div class="pr-product-heading">
+            <div class="pr-product-heading-dot blue"></div>
+            <span class="pr-product-heading-text">Groundwork — learning</span>
+          </div>
+
+          <div class="pr-card-sm founder-sm fade-up">
+            <div class="pr-card-sm-lbl">Founder access</div>
+            <div class="pr-card-sm-amount">Free</div>
+            <div class="pr-card-sm-note">First 1,000 learners · Permanent access · No payment details</div>
+            <div class="pr-div"></div>
+            <ul class="pr-feats">
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All 6 modules, all 75 topics</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>385 practice questions</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Mock exam and readiness report</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Permanent access, no expiry</li>
+            </ul>
+            <a href="#" onclick="startLearning(); return false;" class="pr-btn pr-founder-btn">Claim free access</a>
+            <p class="pr-sub-note">Use code <strong>FOUNDER1000</strong> at the pricing screen</p>
+          </div>
+
+          <div class="pr-card-sm fade-up d1">
+            <div class="pr-card-sm-lbl">Per module</div>
+            <div class="pr-card-sm-amount">£4.99</div>
+            <div class="pr-card-sm-note">Any single module · One-off payment · No expiry</div>
+            <div class="pr-div"></div>
+            <ul class="pr-feats">
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All topics in one module</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Practice questions and feedback</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Module checkpoint and flashcards</li>
+            </ul>
+            <a href="#" onclick="goToUnlockModule(); return false;" class="pr-btn pr-mid">Unlock a module</a>
+          </div>
+
+          <div class="pr-card-sm featured-blue fade-up d2">
+            <div class="pr-card-sm-lbl">Full access</div>
+            <div class="pr-card-sm-amount">£14.99</div>
+            <div class="pr-card-sm-note">Until 1 September 2026, then £24.99 · One payment · No expiry</div>
+            <div class="pr-div"></div>
+            <ul class="pr-feats">
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All 6 modules, all 75 topics</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>385 practice questions</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Checkpoints, mock exam, readiness report</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Permanent access, no subscription</li>
+            </ul>
+            <a href="#" onclick="goToGetFullAccess(); return false;" class="pr-btn pr-main">Get full access</a>
+          </div>
+        </div>
+
+        <!-- Calibrate column -->
+        <div class="pr-product-block">
+          <div class="pr-product-heading">
+            <div class="pr-product-heading-dot teal"></div>
+            <span class="pr-product-heading-text">Calibrate — CPD &amp; competency</span>
+          </div>
+
+          <div class="pr-card-sm featured-teal fade-up">
+            <div class="pr-card-sm-lbl">Year one</div>
+            <div class="pr-card-sm-amount">Free</div>
+            <div class="pr-card-sm-note">First year free for everyone · No card required to start</div>
+            <div class="pr-div"></div>
+            <ul class="pr-feats">
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Self-assessment across 8 competency areas</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>CPD log with activity types and reflections</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Evidence records and development plan</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Individual report, downloadable as PDF</li>
+            </ul>
+            <a href="https://calibrate.modulesix.co.uk/signup.html" class="pr-btn pr-btn-teal">Start Calibrate free</a>
+            <p class="pr-sub-note">We'll remind you 30 days before your free year ends</p>
+          </div>
+
+          <div class="pr-card-sm fade-up d1">
+            <div class="pr-card-sm-lbl">From year two</div>
+            <div class="pr-card-sm-amount">£19.99</div>
+            <div class="pr-card-sm-note">Per year · Cancel any time · Your data is always yours</div>
+            <div class="pr-div"></div>
+            <ul class="pr-feats">
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything from year one continues</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Full CPD history and evidence retained</li>
+              <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All assessments and records intact</li>
+            </ul>
+            <p style="font-size:12px;color:rgba(255,255,255,.25);line-height:1.6;padding-top:14px;margin-top:auto">No action needed now. Subscribe when your first year ends if you want to continue.</p>
+          </div>
+
+          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-lg);padding:16px 18px">
+            <p style="font-size:12px;color:rgba(255,255,255,.32);line-height:1.65">Same login as Groundwork. One account, both products. <a href="https://app.modulesix.co.uk" style="color:rgba(255,255,255,.45);text-decoration:underline">app.modulesix.co.uk</a> for learning, <a href="https://calibrate.modulesix.co.uk" style="color:rgba(255,255,255,.45);text-decoration:underline">calibrate.modulesix.co.uk</a> for CPD.</p>
+          </div>
+        </div>
+
+      </div>
+      <p class="pr-context fade-up"><strong>Groundwork from £14.99 · Calibrate free for year one.</strong> Separate products, same login. No card needed for Calibrate. No subscription for Groundwork.</p>
+    </div>
+
+    <!-- ORGANISATIONS -->
+    <div class="pr-panel" id="pr-org">
+      <div class="pr-org-card fade-up">
+        <div>
+          <div class="pr-org-label">Organisation seats</div>
+          <div class="pr-org-amount">Custom</div>
+          <div class="pr-org-period">Per seat · Per year · Invoice billing available</div>
+          <p class="pr-org-body">One seat covers both Groundwork and Calibrate for each team member. Your people learn through Groundwork and track their competency and CPD through Calibrate. Line managers get visibility, L&amp;D gets data. Pricing is per seat per year — talk to us about your team size.</p>
+          <a href="mailto:hello@modulesix.co.uk" class="pr-org-cta">Talk to us about your team <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div>
+          <div class="pr-org-includes">Included per seat</div>
+          <ul class="pr-org-feats">
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Groundwork — full access, all 6 modules</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Calibrate — competency self-assessment</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>CPD log, evidence records, development plan</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Line manager review and endorsement</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Organisation-wide capability reporting</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Admin dashboard and team management</li>
+          </ul>
+          <p class="pr-org-note">Reviewer and admin seats are included free. <a href="teams.html">See the full teams page.</a></p>
         </div>
       </div>
-
-      <!-- Per module -->
-      <div class="pr-card fade-up d1">
-        <div class="pr-lbl">Per module</div>
-        <div class="pr-amount">£4.99</div>
-        <div class="pr-note">Any single module, one-off payment</div>
-        <div class="pr-div"></div>
-        <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Any single module, all topics</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Practice questions and feedback</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Module checkpoint</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Flashcard revision</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Offline access</li>
-        </ul>
-        <a href="#" onclick="goToUnlockModule(); return false;" class="pr-btn pr-mid">Unlock a module</a>
-      </div>
-
-      <!-- Full access -->
-      <div class="pr-card featured fade-up d2">
-        <div class="pr-lbl">Full access</div>
-        <div class="pr-amount">£14.99</div>
-        <div class="pr-note">Until 1 September 2026, then £24.99</div>
-        <div class="pr-div"></div>
-        <ul class="pr-feats">
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>All 6 modules, all 75 topics</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>385 practice questions</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Flashcards for every topic</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Module checkpoints and mock exam</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Readiness report and weak areas</li>
-          <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6.5-6.5" stroke="#5dcaa5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Permanent access, no subscription</li>
-        </ul>
-        <a href="#" onclick="goToGetFullAccess(); return false;" class="pr-btn pr-main">Get full access</a>
-      </div>
-
     </div>
-    <p class="pr-context fade-up"><strong>£14.99 for everything, until 1 September 2026.</strong> After that, full access moves to £24.99. One payment, no expiry, no subscription. Also need to track your competency and CPD? <a href="https://calibrate.modulesix.co.uk" style="color:rgba(255,255,255,.55);text-decoration:underline">Calibrate is free for individuals.</a></p>
+
   </div>
 </section>
 
@@ -1167,9 +1301,9 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div>
         <div class="ci-label">Calibrate — Individual</div>
         <h3 class="ci-heading">No organisation? No problem.<br>Track your own development.</h3>
-        <p class="ci-body">Calibrate's individual tier gives you the full self-assessment, CPD log, evidence records, and development plan — all for free. No line manager required, no team setup. Just a structured record of where you are and where you are developing, that moves with you through your career.</p>
+        <p class="ci-body">Calibrate's individual tier gives you the full self-assessment, CPD log, evidence records, and development plan. No line manager required, no team setup. Your first year is free — no card needed to start. From year two it's £19.99/year to keep your record going. Your data is always yours, and we'll give you 30 days' notice before anything changes.</p>
       </div>
-      <a href="https://calibrate.modulesix.co.uk/signup.html" class="ci-cta">Start Calibrate free <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://calibrate.modulesix.co.uk/signup.html" class="ci-cta">Start free — year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
     <div class="orgs-cta-row" style="margin-top:48px">
@@ -1182,7 +1316,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 <!-- FINAL CTA -->
 <section class="s-cta">
   <div class="cta-inner">
-    <h2 class="cta-heading fade-up">Ready to <em>start?</em></h2>
+    <h2 class="cta-heading fade-up">Ready to start<br><em>Groundwork?</em></h2>
     <p class="cta-body fade-up">The first 1,000 learners get full access free. Create an account, enter code FOUNDER1000 at the pricing screen, and everything unlocks immediately. After 1,000 places, full access is £14.99 until 1 September 2026, then £24.99.</p>
     <div class="cta-actions fade-up">
       <a href="#" onclick="startLearning(); return false;" class="btn-cta">Claim your free place <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M3 8h10m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -1234,6 +1368,12 @@ function goToGetFullAccess() {
 }
 function goToSignIn() {
   window.location.href = isMobile() ? 'https://m.modulesix.co.uk/?screen=signin' : 'https://app.modulesix.co.uk/signin.html';
+}
+function showPricing(tab, btn) {
+  document.querySelectorAll('.pr-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.pr-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('pr-' + tab).classList.add('active');
+  btn.classList.add('active');
 }
 
 // Live founder counter
