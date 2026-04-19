@@ -479,7 +479,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <div>
       <div class="hero-badge"><div class="hero-dot"></div>Groundwork — by Module Six</div>
       <h1>Learn project management.<br><em>Properly.</em></h1>
-      <p class="hero-sub">Groundwork is a structured learning platform built around real project management practice. <strong>Six modules, 75 topics, 385 practice questions,</strong> and a clear path from first principles to professional confidence. Aligned to the APM PFQ.</p>
+      <p class="hero-sub">Groundwork is a structured learning platform built around real project management practice. <strong>Six modules, 75 topics, 385 practice questions,</strong> and a clear path from first principles to genuine professional confidence.</p>
 
       <div class="founder-box">
         <div class="founder-box__label">Founder access</div>
@@ -490,7 +490,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
             <span class="founder-code__label">Your code:</span>
             <span class="founder-code__value">FOUNDER1000</span>
           </div>
-          <button class="founder-btn" onclick="startLearning()">Claim your place <svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M3 7.5h9m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="founder-btn" style="margin-left:8px" onclick="startLearning()">Claim your place <svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M3 7.5h9m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <p class="founder-note">Create an account then enter the code at the pricing screen. Full access unlocks immediately.</p>
       </div>
@@ -511,7 +511,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div class="hero-stats">
         <div><div class="hs-num">75</div><div class="hs-label">topics</div></div>
         <div><div class="hs-num">385</div><div class="hs-label">practice questions</div></div>
-        <div><div class="hs-num">1,000</div><div class="hs-label">free places</div></div>
+        <div><div class="hs-num" id="hero-counter">1,000</div><div class="hs-label">places remaining</div></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -547,7 +547,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <h2 class="pos-heading">More than exam prep.<br><em>A foundation for your career.</em></h2>
         <div class="pos-body">
           <p>Groundwork is a structured project management learning platform. The content is built around established practice, drawing on the APM Body of Knowledge and recognised frameworks used across industries.</p>
-          <p>The immediate benefit is passing the APM PFQ. But the knowledge you build here goes well beyond any single exam. The topics, frameworks, and applied thinking covered in Module Six are the foundations of effective project delivery at every level.</p>
+          <p>Work through Groundwork and you will come away with a solid grasp of how projects are defined, planned, delivered, and closed — the frameworks, the thinking, and the applied judgement that underpins effective project work at every level. If you are sitting the APM PFQ, the curriculum maps directly to the syllabus and will prepare you thoroughly for the exam.</p>
           <p>Our longer-term ambition is to build this into a recognised learning path in its own right, with our own assessments and qualifications. Groundwork is the beginning of that.</p>
         </div>
       </div>
@@ -555,8 +555,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="pos-pillars">
           <div class="pos-pillar accent">
             <div class="pos-pillar__label">Right now</div>
-            <div class="pos-pillar__title">Pass the APM PFQ</div>
-            <div class="pos-pillar__body">The full PFQ syllabus, structured and tested. Six modules, 75 topics, 385 practice questions, mock exam, and a readiness report.</div>
+            <div class="pos-pillar__title">Build solid PM foundations</div>
+            <div class="pos-pillar__body">Six modules, 75 topics, 385 practice questions. The curriculum maps to the APM PFQ — work through it and you will be ready to sit the exam.</div>
           </div>
           <div class="pos-pillar">
             <div class="pos-pillar__label">Beyond the exam</div>
@@ -580,11 +580,11 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <div class="problem-grid">
       <div class="fade-up">
         <div class="s-label">The challenge</div>
-        <h2 class="s-heading">The syllabus is broad.<br>Life is busy.</h2>
+        <h2 class="s-heading">Real knowledge takes<br>time to build.</h2>
         <div class="s-body">
-          <p>The APM PFQ covers a lot of ground. Governance, planning, risk, stakeholder management, benefits realisation: the syllabus is broad and the exam tests understanding, not just recall.</p>
-          <p>Most people study alongside a full-time job. That means finding time where you can, picking up and putting down the material across days or weeks, and trying to hold it all together without losing the thread.</p>
-          <p>A PDF and a highlighter will get you through, but only just. Groundwork gives you structure, tested understanding, and a clear picture of where you actually stand.</p>
+          <p>Project management is a broad discipline. Governance, planning, risk, stakeholder management, benefits realisation — each of these is a subject in its own right. Understanding them properly, not just well enough to answer a question, takes structured effort.</p>
+          <p>Most people try to fit learning around a full-time job. That means picking things up and putting them down, losing the thread, and never quite feeling confident in the foundations.</p>
+          <p>Groundwork gives you a clear structure, tested understanding at every step, and a picture of where you actually stand — not just where you think you do.</p>
         </div>
       </div>
       <div class="fade-up d2">
@@ -602,8 +602,8 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
 <section>
   <div class="si">
     <div class="fade-up">
-      <div class="s-label">The course</div>
-      <h2 class="s-heading">Built for the PFQ.<br><em>Built to actually teach you.</em></h2>
+      <div class="s-label">The curriculum</div>
+      <h2 class="s-heading">Structured learning.<br><em>Built to actually stick.</em></h2>
     </div>
     <div class="what-grid">
       <div class="fade-up">
@@ -621,7 +621,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       </div>
       <div class="fade-up d2">
         <div class="s-body">
-          <p>Groundwork follows the full APM PFQ syllabus across six modules and 75 topics. Every topic is a structured lesson: the concept explained clearly, a worked example from a realistic project scenario, common exam mistakes, and a quick recap before you move on.</p>
+          <p>Groundwork covers the core body of project management knowledge across six modules and 75 topics — from foundations and governance through to delivery, risk, and value realisation. Every topic is a structured lesson: the concept explained clearly, a worked example from a realistic project scenario, and a quick recap before you move on. The curriculum aligns to the APM PFQ, so working through it prepares you to sit the exam when you are ready.</p>
           <p>After each lesson you answer practice questions. Not to test memory, but to build applied understanding. The app tracks where you're confident and where you're not, and surfaces the right material at the right time.</p>
           <p>When you've worked through the modules, a full mock exam and readiness report tell you where you stand before you sit the real thing.</p>
           <p>It works on any device, installs as an app, and works offline. One payment, no subscription, no expiry.</p>
@@ -636,14 +636,14 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="si">
     <div class="fade-up">
       <div class="s-label">What's included</div>
-      <h2 class="s-heading">Everything you need<br>between now and exam day.</h2>
+      <h2 class="s-heading">Everything you need<br>to build real confidence.</h2>
     </div>
     <div class="feat-grid">
       <div class="fc fade-up"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14M4 10h14M4 14h8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div><div class="fc-stat">75 topics</div><h3>Six modules, full syllabus</h3><p>The complete PFQ syllabus, structured in the sequence that makes sense. Each module builds on the last, from foundations through to delivery, control, and value realisation.</p></div>
       <div class="fc fade-up d1"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.75"/><path d="M11 7v4l3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div><div class="fc-stat">385 questions</div><h3>Practice questions with proper feedback</h3><p>Every topic has PFQ-style and scenario-based questions. Answers come with full explanations, so you understand why you got it wrong, not just that you did.</p></div>
       <div class="fc fade-up d2"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 14l4-4 3 3 4-5 4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Spaced repetition</h3><p>The app tracks your scores and brings back the topics where you're weakest. Revision time spent where it counts, not re-reading material you already know.</p></div>
       <div class="fc fade-up"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 15.5l-4.9 2.7.9-5.5L3 8.8l5.5-.8L11 3z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></div><h3>Module checkpoints</h3><p>A scored checkpoint at the end of each module tests your understanding before you move on. A clear signal of where you stand, module by module.</p></div>
-      <div class="fc fade-up d1"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="12" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="3" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="12" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/></svg></div><h3>Flashcard revision</h3><p>Every topic has a flashcard mode for fast, focused revision. Ideal for commuting, short breaks, or consolidating knowledge the day before the exam. Works offline.</p></div>
+      <div class="fc fade-up d1"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="12" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="3" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/><rect x="12" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.75"/></svg></div><h3>Flashcard revision</h3><p>Every topic has a flashcard mode for fast, focused revision. Ideal for commuting, short breaks, or consolidating knowledge whenever you have a few minutes. Works offline.</p></div>
       <div class="fc fade-up d2"><div class="fc-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="5" y="2" width="12" height="18" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M9 6h4M9 10h4M9 14h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Works offline, installs as an app</h3><p>Add it to your home screen on any device. Open it on the train, in a waiting room, anywhere. No connection needed once it's loaded.</p></div>
     </div>
   </div>
@@ -698,26 +698,12 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div class="s-label" style="text-align:center">Early feedback</div>
       <h2 class="s-heading" style="text-align:center;margin-bottom:0">What learners say.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
-        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
+    <div style="display:grid;grid-template-columns:repeat(1,1fr);gap:24px;max-width:600px;margin:0 auto">
+      <div style="background:white;border-radius:var(--r-xl);padding:36px;border:1px solid var(--grey-100)">
+        <p style="font-size:17px;line-height:1.7;color:var(--text-2);font-style:italic;margin-bottom:24px">"As someone who thinks about PM capability every day, the depth here surprised me. This is a proper grounding in the subject and the kind of understanding that translates into better project delivery."</p>
         <div style="display:flex;align-items:center;gap:12px">
           <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
-          <div><div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div><div style="font-size:12px;color:var(--text-3)">Role · Organisation</div></div>
-        </div>
-      </div>
-      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
-        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
-          <div><div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div><div style="font-size:12px;color:var(--text-3)">Role · Organisation</div></div>
-        </div>
-      </div>
-      <div style="background:white;border-radius:var(--r-xl);padding:32px;border:1px solid var(--grey-100)">
-        <p style="font-size:16px;line-height:1.65;color:var(--text-2);font-style:italic;margin-bottom:24px">"Testimonial from pilot user will appear here."</p>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:38px;height:38px;border-radius:50%;background:var(--grey-100);flex-shrink:0"></div>
-          <div><div style="font-size:14px;font-weight:600;color:var(--text)">Pilot user name</div><div style="font-size:12px;color:var(--text-3)">Role · Organisation</div></div>
+          <div><div style="font-size:14px;font-weight:600;color:var(--text)">Matt Hawkes</div><div style="font-size:12px;color:var(--text-3)">Head of Programme Capability</div></div>
         </div>
       </div>
     </div>
@@ -820,14 +806,14 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       <div class="s-label">How it works</div>
       <h2 class="s-heading">Designed to fit around<br>a working week.</h2>
     </div>
-    <p class="steps-intro fade-up">Groundwork is built for people studying alongside a full-time job. Short focused lessons, smart revision, and a clear path from first topic to exam day.</p>
+    <p class="steps-intro fade-up">Groundwork is built for people learning alongside a full-time job. Short focused lessons, smart revision, and a clear path from first principles to genuine confidence.</p>
     <div class="steps-layout">
       <div class="steps-list">
-        <div class="step-item fade-up"><div class="step-n">1</div><div class="step-c"><h3>Learn</h3><p>Each topic opens with a clear explanation of the concept, a worked example, and a note on where candidates typically go wrong. Lessons are short enough to complete in a single sitting, long enough to actually cover the ground.</p></div></div>
-        <div class="step-item fade-up d1"><div class="step-n">2</div><div class="step-c"><h3>Practise</h3><p>After each lesson, answer a set of practice questions. Scenario-based and PFQ-style. Feedback on every answer explains the reasoning, so each question is a learning moment, not just a score.</p></div></div>
+        <div class="step-item fade-up"><div class="step-n">1</div><div class="step-c"><h3>Learn</h3><p>Each topic opens with a clear explanation of the concept, a worked example from a realistic project scenario, and a note on where people commonly misapply it. Lessons are short enough to complete in a single sitting, long enough to actually cover the ground.</p></div></div>
+        <div class="step-item fade-up d1"><div class="step-n">2</div><div class="step-c"><h3>Practise</h3><p>After each lesson, answer a set of practice questions. Scenario-based and applied. Feedback on every answer explains the reasoning, so each question is a learning moment, not just a score.</p></div></div>
         <div class="step-item fade-up d2"><div class="step-n">3</div><div class="step-c"><h3>Track</h3><p>Your dashboard shows progress across all six modules, recent scores, and the topics that need more work. You always know where you are and what to do next.</p></div></div>
         <div class="step-item fade-up d3"><div class="step-n">4</div><div class="step-c"><h3>Revise</h3><p>The app automatically resurfaces weak topics for review. Flashcards, targeted questions, quick recaps. No need to maintain your own revision list.</p></div></div>
-        <div class="step-item fade-up d4"><div class="step-n">5</div><div class="step-c"><h3>Assess</h3><p>When you're through the modules, sit the mock exam under timed conditions. Review your readiness report. If the numbers are there, you're ready to book.</p></div></div>
+        <div class="step-item fade-up d4"><div class="step-n">5</div><div class="step-c"><h3>Assess</h3><p>When you're through the modules, sit the mock exam under timed conditions. Review your readiness report. If the numbers are there, you have the knowledge — and you're ready to book the exam.</p></div></div>
       </div>
       <div class="steps-vis fade-up d2" style="position:relative">
         <div class="sv-bg"></div>
@@ -972,13 +958,15 @@ function goToSignIn() {
     if (!resp.ok) throw new Error();
     const data = await resp.json();
     const remaining = data.remaining;
-    const el = document.getElementById('founder-counter');
-    if (el && typeof remaining === 'number') {
-      el.textContent = remaining + ' places remaining';
+    const banner = document.getElementById('founder-counter');
+    const hero   = document.getElementById('hero-counter');
+    if (typeof remaining === 'number') {
+      if (banner) banner.textContent = remaining.toLocaleString() + ' places remaining';
+      if (hero)   hero.textContent   = remaining.toLocaleString();
     }
   } catch(e) {
-    const el = document.getElementById('founder-counter');
-    if (el) el.textContent = 'Founder offer';
+    const banner = document.getElementById('founder-counter');
+    if (banner) banner.textContent = 'Founder offer';
   }
 })();
 </script>
