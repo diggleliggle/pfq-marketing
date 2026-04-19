@@ -1,0 +1,223 @@
+/*
+ * tokens.css — Module Six design tokens
+ * Single source of truth for all surfaces: marketing, web app, phone PWA, Calibrate.
+ *
+ * HOW TO USE
+ * ----------
+ * Add one line to the <head> of every HTML file, before any other stylesheet:
+ *   <link rel="stylesheet" href="/tokens.css">
+ *
+ * For the marketing site (self-contained, no external CSS):
+ *   Copy the :root block into the existing <style> tag, replacing the current :root.
+ *
+ * CHANGING THE BRAND
+ * ------------------
+ * To retheme the entire platform, edit the values in this file only.
+ * Every surface that references these tokens updates automatically.
+ *
+ * PRODUCT COLOURS
+ * ---------------
+ * Module Six (parent brand): --ms6-* — used on the marketing site and shared nav
+ * Groundwork: --gw-* — primary blue, used in the learning apps
+ * Calibrate: --cal-* — teal/green accent, used in the competency platform
+ *
+ * Both product colours are available on all surfaces so cross-product UI
+ * elements (banners, links, upsell cards) can stay on-brand.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  --font-sans:        'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display:     'DM Serif Display', Georgia, serif;
+
+  /* Aliases used by Calibrate base.css */
+  --font-body:        var(--font-sans);
+
+  /* Scale */
+  --font-size-xs:     11px;
+  --font-size-sm:     13px;
+  --font-size-base:   15px;
+  --font-size-md:     16px;
+  --font-size-lg:     18px;
+  --font-size-xl:     22px;
+  --line-height-base: 1.65;
+  --line-height-tight: 1.2;
+
+
+  /* ── Border radius ───────────────────────────────────────────────────────── */
+  --radius-sm:  6px;
+  --radius:     10px;       /* alias: --r-md */
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* Groundwork app aliases */
+  --r-sm:  var(--radius-sm);
+  --r-md:  var(--radius-md);
+  --r-lg:  var(--radius-lg);
+  --r-xl:  var(--radius-xl);
+
+
+  /* ── Module Six — parent brand (deep navy + bright blue) ─────────────────── */
+  --ms6-navy:          #0a1628;
+  --ms6-navy-mid:      #112240;
+  --ms6-navy-light:    #1a3357;
+  --ms6-blue:          #2563a8;
+  --ms6-blue-mid:      #3b7dd8;
+  --ms6-blue-bright:   #4a9eff;
+
+
+  /* ── Groundwork — learning product (blue) ───────────────────────────────── */
+  --gw-primary:        #185FA5;   /* main interactive blue */
+  --gw-primary-dark:   #0C447C;
+  --gw-primary-mid:    #2563a8;
+  --gw-primary-light:  #E6F1FB;   /* tint for backgrounds */
+  --gw-primary-border: rgba(37,99,168,.25);
+
+  /* Calibrate base.css aliases */
+  --brand-500:  var(--gw-primary);
+  --brand-700:  var(--gw-primary-dark);
+
+  /* Phone PWA alias */
+  --blue:       var(--gw-primary);
+  --blue-dark:  var(--gw-primary-dark);
+  --blue-light: var(--gw-primary-light);
+
+  /* Web app semantic alias */
+  --color-primary:        var(--gw-primary);
+  --color-primary-dark:   var(--gw-primary-dark);
+  --color-primary-light:  var(--gw-primary-light);
+  --color-primary-border: var(--gw-primary-border);
+
+
+  /* ── Calibrate — competency product (teal/green) ────────────────────────── */
+  --cal-teal:          #1d9e75;
+  --cal-teal-light:    #5dcaa5;
+  --cal-teal-bg:       rgba(29,158,117,.08);
+  --cal-teal-border:   rgba(29,158,117,.2);
+
+  /* Marketing site aliases */
+  --teal:              var(--cal-teal);
+  --teal-light:        var(--cal-teal-light);
+
+
+  /* ── Neutral palette ─────────────────────────────────────────────────────── */
+  --white:      #ffffff;
+  --off-white:  #f7f9fc;
+  --grey-100:   #eef1f6;
+  --grey-200:   #d8dde8;
+  --grey-400:   #8896ab;
+
+  /* Text */
+  --text:       #0a1628;
+  --text-2:     #4a5568;   /* secondary */
+  --text-3:     #8896ab;   /* hint / placeholder */
+
+  /* Status colours */
+  --amber:      #f59e0b;
+  --amber-dark: #d97706;
+  --red:        #ef4444;
+  --red-light:  rgba(239,68,68,.1);
+  --green:      #3B6D11;
+  --green-bg:   #EAF3DE;
+  --warn-bg:    #FAEEDA;
+  --warn-text:  #854F0B;
+
+
+  /* ── Light mode surface tokens (used by web app and Calibrate) ───────────── */
+  --color-bg:              var(--white);
+  --color-bg-surface:      var(--white);
+  --color-bg-raised:       var(--off-white);
+  --color-bg-subtle:       var(--grey-100);
+  --color-border:          rgba(26,25,23,0.12);
+  --color-border-strong:   rgba(26,25,23,0.25);
+  --color-text-primary:    var(--text);
+  --color-text-secondary:  var(--text-2);
+  --color-text-hint:       var(--text-3);
+
+  /* Phone PWA aliases (match existing --bg, --bg2, --bg3 naming) */
+  --bg:    var(--white);
+  --bg2:   #f5f5f4;
+  --bg3:   #eeece6;
+  --border:  rgba(26,25,23,0.15);
+  --border2: rgba(26,25,23,0.30);
+
+  /* Calibrate dark surface tokens (used on login/signup pages) */
+  --brand-950: #060d1a;   /* very dark navy for Calibrate auth pages */
+
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,.12);
+
+
+  /* ── Transitions ─────────────────────────────────────────────────────────── */
+  --transition-fast:  0.15s ease;
+  --transition-base:  0.2s ease;
+  --transition-slow:  0.35s ease;
+
+}
+
+
+/* ── Dark mode surface tokens ────────────────────────────────────────────────
+ * Applied when <body class="dark"> (phone PWA) or prefers-color-scheme.
+ * Does not affect marketing site (always light/navy).
+ * ─────────────────────────────────────────────────────────────────────────── */
+body.dark,
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:             #1a1917;
+    --color-bg-surface:     #1a1917;
+    --color-bg-raised:      #232220;
+    --color-bg-subtle:      #2c2b28;
+    --color-border:         rgba(245,243,238,0.12);
+    --color-border-strong:  rgba(245,243,238,0.25);
+    --color-text-primary:   #f5f3ee;
+    --color-text-secondary: #a8a49c;
+    --color-text-hint:      #6b6963;
+
+    /* Phone PWA aliases */
+    --bg:    #1a1917;
+    --bg2:   #232220;
+    --bg3:   #2c2b28;
+    --border:  rgba(245,243,238,0.15);
+    --border2: rgba(245,243,238,0.28);
+
+    /* Product light tints invert in dark mode */
+    --gw-primary-light:  #0c3058;
+    --blue-light:        #0c3058;
+    --green-bg:          #173404;
+    --green:             #97c459;
+    --warn-bg:           #412402;
+    --warn-text:         #FAC775;
+  }
+}
+
+/* Explicit body.dark override for phone PWA (doesn't use prefers-color-scheme) */
+body.dark {
+  --color-bg:             #1a1917;
+  --color-bg-surface:     #1a1917;
+  --color-bg-raised:      #232220;
+  --color-bg-subtle:      #2c2b28;
+  --color-border:         rgba(245,243,238,0.12);
+  --color-border-strong:  rgba(245,243,238,0.25);
+  --color-text-primary:   #f5f3ee;
+  --color-text-secondary: #a8a49c;
+  --color-text-hint:      #6b6963;
+  --bg:    #1a1917;
+  --bg2:   #232220;
+  --bg3:   #2c2b28;
+  --border:  rgba(245,243,238,0.15);
+  --border2: rgba(245,243,238,0.28);
+  --gw-primary-light:  #0c3058;
+  --blue-light:        #0c3058;
+  --green-bg:          #173404;
+  --green:             #97c459;
+  --warn-bg:           #412402;
+  --warn-text:         #FAC775;
+}
