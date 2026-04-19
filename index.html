@@ -442,12 +442,91 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .footer-top{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:600px){
-  section{padding:72px 20px}
-  .hero{padding:40px 20px 60px}
-  .hero-stats{gap:18px}
-  .feat-grid{grid-template-columns:1fr}
+  /* Base */
+  section{padding:56px 18px}
   nav{padding:0 16px}
   .nav-link{display:none}
+  .nav-cta-ghost{display:none} /* hide For teams ghost in nav on mobile — it's in the hero */
+
+  /* Hero */
+  .hero{padding:28px 18px 48px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-visual{display:none} /* hide phone mockup on mobile */
+  .hero h1{font-size:clamp(30px,8vw,42px);margin-bottom:12px}
+  .hero-sub{font-size:15px;margin-bottom:24px}
+  .hero-badge{font-size:12px;padding:5px 12px;margin-bottom:20px}
+  .hero-stats{gap:16px;margin-top:28px;padding-top:24px;flex-wrap:wrap}
+  .hs-num{font-size:24px}
+  .hs-label{font-size:12px}
+
+  /* Founder box */
+  .founder-box{padding:18px}
+  .founder-box__headline{font-size:17px}
+  .founder-box__sub{font-size:13px}
+  .founder-code__value{font-size:13px;padding:5px 10px}
+  .founder-btn{font-size:14px;padding:12px 20px}
+
+  /* Teams callout */
+  .teams-callout{flex-direction:column;align-items:flex-start;gap:14px;padding:16px}
+
+  /* Founder banner */
+  .founder-banner{padding:10px 16px}
+  .founder-banner p{font-size:13px}
+  .founder-counter{display:none} /* counter shows in hero stats instead */
+
+  /* Sections */
+  .s-heading{font-size:clamp(24px,6vw,34px)}
+  .s-body{font-size:15px}
+  .steps-intro{font-size:15px;margin-bottom:40px}
+
+  /* Problem quote */
+  .pq{padding:32px 24px}
+  .pq-mark{font-size:56px}
+  .pq-text{font-size:18px}
+
+  /* Features */
+  .feat-grid{grid-template-columns:1fr}
+  .fc{padding:22px}
+
+  /* Modes */
+  .modes-grid{grid-template-columns:1fr;gap:16px}
+  .mode-card{padding:28px}
+  .modes-heading{font-size:clamp(24px,6vw,34px)}
+  .modes-sub{font-size:15px;margin-bottom:36px}
+
+  /* Showcase */
+  .sc-items{gap:56px}
+  .sc-heading{font-size:clamp(24px,6vw,34px)}
+  .sc-sub{font-size:15px;margin-bottom:48px}
+  .sc-title{font-size:clamp(20px,5vw,26px)}
+  .sc-body{font-size:15px}
+
+  /* Pricing */
+  .pr-heading{font-size:clamp(24px,6vw,34px)}
+  .pr-sub{font-size:15px;margin-bottom:36px}
+  .pr-cards{grid-template-columns:1fr;max-width:100%}
+  .pr-card,.pr-card-founder{padding:24px 20px}
+  .pr-amount{font-size:36px}
+  .pr-amount-free{font-size:36px}
+
+  /* How it works */
+  .steps-layout{grid-template-columns:1fr;gap:40px}
+
+  /* CTA */
+  .s-cta{padding:72px 18px}
+  .cta-heading{font-size:clamp(26px,7vw,38px)}
+  .cta-body{font-size:15px}
+  .btn-cta{font-size:15px;padding:14px 28px}
+
+  /* Footer */
+  .footer-top{flex-direction:column;align-items:flex-start}
+  .footer-links{flex-wrap:wrap;gap:16px}
+
+  /* Positioning */
+  .pos-heading{font-size:clamp(24px,6vw,34px)}
+  .pos-body{font-size:15px}
+  .pos-pillars{gap:12px}
+  .pos-pillar{padding:16px 18px}
 }
 </style>
 </head>
