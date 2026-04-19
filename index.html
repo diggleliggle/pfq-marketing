@@ -571,7 +571,9 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   section{padding:56px 18px}
   nav{padding:0 16px}
   .nav-link{display:none}
-  .nav-cta-ghost{display:none} /* hide For teams ghost in nav on mobile — it's in the hero */
+  .nav-cta-ghost{display:none} /* hide For teams ghost in nav on mobile, it's in the hero */
+  .nav-cta{display:none} /* hide Get free access, founder box handles this */
+  #nav-teams-btn{display:none} /* hide For organisations on mobile */
 
   /* Hero */
   .hero{padding:28px 18px 48px}
@@ -589,7 +591,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   .founder-box__headline{font-size:17px}
   .founder-box__sub{font-size:13px}
   .founder-code__value{font-size:13px;padding:5px 10px}
-  .founder-btn{font-size:14px;padding:12px 20px}
+  .founder-btn{font-size:14px;padding:12px 20px;width:100%;justify-content:center;margin-left:0!important}
 
   /* Teams callout */
   .teams-callout{flex-direction:column;align-items:flex-start;gap:14px;padding:16px}
@@ -685,7 +687,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <a href="#" onclick="startLearning(); return false;" class="nav-link">Groundwork</a>
     <a href="https://calibrate.modulesix.co.uk" class="nav-link">Calibrate</a>
     <a href="#pricing" class="nav-link">Pricing</a>
-    <a href="teams.html" style="display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;font-size:14px;font-weight:500;padding:9px 20px;border-radius:var(--r-md);transition:background .2s,transform .15s" onmouseover="this.style.background='#f0f6ff'" onmouseout="this.style.background='white'">For organisations</a>
+    <a id="nav-teams-btn" href="teams.html" style="display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;font-size:14px;font-weight:500;padding:9px 20px;border-radius:var(--r-md);transition:background .2s,transform .15s" onmouseover="this.style.background='#f0f6ff'" onmouseout="this.style.background='white'">For organisations</a>
     <a href="#" onclick="startLearning(); return false;" class="nav-cta">Get free access <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 7h9m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </nav>
@@ -700,7 +702,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
   <div class="hero-bg"><div class="hb1"></div><div class="hb2"></div><div class="hb-grid"></div></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge"><div class="hero-dot"></div>Groundwork — by Module Six</div>
+      <div class="hero-badge"><div class="hero-dot"></div>Groundwork by Module Six</div>
       <h1>Learn project management.<br><em>Properly.</em></h1>
       <p class="hero-sub">Groundwork is Module Six's structured learning platform. <strong>Six modules, 75 topics, 385 practice questions,</strong> and a clear path from first principles to genuine professional confidence. Then use Calibrate to track your competency and CPD.</p>
 
@@ -855,7 +857,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
           <div><div class="prod-stat-n">8</div><div class="prod-stat-l">framework areas</div></div>
           <div><div class="prod-stat-n">Free*</div><div class="prod-stat-l">year one for all</div></div>
         </div>
-        <a href="https://calibrate.modulesix.co.uk" class="prod-card-link c">Start Calibrate — free year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://calibrate.modulesix.co.uk" class="prod-card-link c">Start Calibrate, free year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <p style="font-size:11px;color:var(--text-3);margin-top:8px">*Free for year one. £19.99/year from year two. No card required to start.</p>
         <a href="teams.html" class="prod-card-link-ghost" style="color:var(--text-3)">Teams and organisations</a>
       </div>
@@ -872,9 +874,9 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="s-label">The challenge</div>
         <h2 class="s-heading">Real knowledge takes<br>time to build.</h2>
         <div class="s-body">
-          <p>Project management is a broad discipline. Governance, planning, risk, stakeholder management, benefits realisation — each of these is a subject in its own right. Understanding them properly, not just well enough to answer a question, takes structured effort.</p>
+          <p>Project management is a broad discipline. Governance, planning, risk, stakeholder management, benefits realisation: each of these is a subject in its own right. Understanding them properly, not just well enough to answer a question, takes structured effort.</p>
           <p>Most people try to fit learning around a full-time job. That means picking things up and putting them down, losing the thread, and never quite feeling confident in the foundations.</p>
-          <p>Groundwork gives you a clear structure, tested understanding at every step, and a picture of where you actually stand — not just where you think you do.</p>
+          <p>Groundwork gives you a clear structure, tested understanding at every step, and a picture of where you actually stand, not just where you think you do.</p>
         </div>
       </div>
       <div class="fade-up d2">
@@ -911,7 +913,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
       </div>
       <div class="fade-up d2">
         <div class="s-body">
-          <p>Groundwork covers the core body of project management knowledge across six modules and 75 topics — from foundations and governance through to delivery, risk, and value realisation. Every topic is a structured lesson: the concept explained clearly, a worked example from a realistic project scenario, and a quick recap before you move on. The curriculum is built around established project management practice and prepares you well for professional qualifications, including the APM PFQ.</p>
+          <p>Groundwork covers the core body of project management knowledge across six modules and 75 topics, from foundations and governance through to delivery, risk, and value realisation. Every topic is a structured lesson: the concept explained clearly, a worked example from a realistic project scenario, and a quick recap before you move on. The curriculum is built around established project management practice and prepares you well for professional qualifications, including the APM PFQ.</p>
           <p>After each lesson you answer practice questions. Not to test memory, but to build applied understanding. The app tracks where you're confident and where you're not, and surfaces the right material at the right time.</p>
           <p>When you've worked through the modules, a full mock exam and readiness report tell you where you stand before you sit a formal assessment.</p>
           <p>It works on any device, installs as an app, and works offline. One payment, no subscription, no expiry.</p>
@@ -1103,7 +1105,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="step-item fade-up d1"><div class="step-n">2</div><div class="step-c"><h3>Practise</h3><p>After each lesson, answer a set of practice questions. Scenario-based and applied. Feedback on every answer explains the reasoning, so each question is a learning moment, not just a score.</p></div></div>
         <div class="step-item fade-up d2"><div class="step-n">3</div><div class="step-c"><h3>Track</h3><p>Your dashboard shows progress across all six modules, recent scores, and the topics that need more work. You always know where you are and what to do next.</p></div></div>
         <div class="step-item fade-up d3"><div class="step-n">4</div><div class="step-c"><h3>Revise</h3><p>The app automatically resurfaces weak topics for review. Flashcards, targeted questions, quick recaps. No need to maintain your own revision list.</p></div></div>
-        <div class="step-item fade-up d4"><div class="step-n">5</div><div class="step-c"><h3>Assess</h3><p>When you're through the modules, sit the mock exam under timed conditions. Review your readiness report. If the numbers are there, you have the knowledge — and you're ready for whatever comes next, whether that's a formal qualification or just greater confidence in your practice.</p></div></div>
+        <div class="step-item fade-up d4"><div class="step-n">5</div><div class="step-c"><h3>Assess</h3><p>When you're through the modules, sit the mock exam under timed conditions. Review your readiness report. If the numbers are there, you have the knowledge, and you're ready for whatever comes next, whether that's a formal qualification or just greater confidence in your practice.</p></div></div>
       </div>
       <div class="steps-vis fade-up d2" style="position:relative">
         <div class="sv-bg"></div>
@@ -1141,7 +1143,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="pr-product-block">
           <div class="pr-product-heading">
             <div class="pr-product-heading-dot blue"></div>
-            <span class="pr-product-heading-text">Groundwork — learning</span>
+            <span class="pr-product-heading-text">Groundwork: learning</span>
           </div>
 
           <div class="pr-card-sm founder-sm fade-up">
@@ -1191,7 +1193,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
         <div class="pr-product-block">
           <div class="pr-product-heading">
             <div class="pr-product-heading-dot teal"></div>
-            <span class="pr-product-heading-text">Calibrate — CPD &amp; competency</span>
+            <span class="pr-product-heading-text">Calibrate: CPD &amp; competency</span>
           </div>
 
           <div class="pr-card-sm featured-teal fade-up">
@@ -1238,14 +1240,14 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
           <div class="pr-org-label">Organisation seats</div>
           <div class="pr-org-amount">Custom</div>
           <div class="pr-org-period">Per seat · Per year · Invoice billing available</div>
-          <p class="pr-org-body">One seat covers both Groundwork and Calibrate for each team member. Your people learn through Groundwork and track their competency and CPD through Calibrate. Line managers get visibility, L&amp;D gets data. Pricing is per seat per year — talk to us about your team size.</p>
+          <p class="pr-org-body">One seat covers both Groundwork and Calibrate for each team member. Your people learn through Groundwork and track their competency and CPD through Calibrate. Line managers get visibility, L&amp;D gets data. Pricing is per seat per year. Talk to us about your team size.</p>
           <a href="mailto:hello@modulesix.co.uk" class="pr-org-cta">Talk to us about your team <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <div>
           <div class="pr-org-includes">Included per seat</div>
           <ul class="pr-org-feats">
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Groundwork — full access, all 6 modules</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Calibrate — competency self-assessment</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Groundwork: full access, all 6 modules</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Calibrate: competency self-assessment</li>
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>CPD log, evidence records, development plan</li>
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Line manager review and endorsement</li>
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 3 7-7" stroke="#5dcaa5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Organisation-wide capability reporting</li>
@@ -1266,7 +1268,7 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <div class="orgs-header">
       <div class="orgs-label">For organisations</div>
       <h2 class="orgs-heading">One platform.<br><em>For your whole team.</em></h2>
-      <p class="orgs-body">Organisations use Module Six to build capability across their project management teams — from structured learning through to competency tracking, CPD records, and evidence-based development conversations. Both products are available under team and organisation licensing.</p>
+      <p class="orgs-body">Organisations use Module Six to build capability across their project management teams: from structured learning through to competency tracking, CPD records, and evidence-based development conversations. Both products are available under team and organisation licensing.</p>
     </div>
     <div class="orgs-products">
       <div class="orgs-prod accent">
@@ -1299,11 +1301,11 @@ footer{background:var(--navy);padding:48px 24px;border-top:1px solid rgba(255,25
     <!-- Calibrate Individual callout -->
     <div class="calibrate-ind fade-up">
       <div>
-        <div class="ci-label">Calibrate — Individual</div>
+        <div class="ci-label">Calibrate: Individual</div>
         <h3 class="ci-heading">No organisation? No problem.<br>Track your own development.</h3>
-        <p class="ci-body">Calibrate's individual tier gives you the full self-assessment, CPD log, evidence records, and development plan. No line manager required, no team setup. Your first year is free — no card needed to start. From year two it's £19.99/year to keep your record going. Your data is always yours, and we'll give you 30 days' notice before anything changes.</p>
+        <p class="ci-body">Calibrate's individual tier gives you the full self-assessment, CPD log, evidence records, and development plan. No line manager required, no team setup. Your first year is free. No card needed to start. From year two it's £19.99/year to keep your record going. Your data is always yours, and we'll give you 30 days' notice before anything changes.</p>
       </div>
-      <a href="https://calibrate.modulesix.co.uk/signup.html" class="ci-cta">Start free — year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://calibrate.modulesix.co.uk/signup.html" class="ci-cta">Start free, year one <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style="display:inline;vertical-align:middle;margin-left:2px"><path d="M2.5 6.5h8m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
     <div class="orgs-cta-row" style="margin-top:48px">
