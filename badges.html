@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPP Member Badges — Preview</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: #f7f8fc; }
+    .badge-showcase { padding: 5rem 2rem; max-width: 900px; margin: 0 auto; }
+    .badge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 3rem 0; }
+    .badge-card {
+      background: white; border-radius: 12px; padding: 2.5rem 1.5rem;
+      text-align: center; border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(13,27,61,0.06);
+    }
+    .badge-card img { width: 120px; height: 120px; margin: 0 auto 1.5rem; display: block; }
+    .badge-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: #0D1B3D; margin-bottom: 0.25rem; }
+    .badge-desig { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
+    .badge-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; }
+
+    .badge-card.student .badge-desig { color: #0077B6; }
+    .badge-card.associate .badge-desig { color: #7B1FA2; }
+    .badge-card.member .badge-desig { color: #D7263D; }
+    .badge-card.fellow .badge-desig { color: #1E8E3E; }
+
+    /* Additive illustration */
+    .additive-row { display: flex; align-items: center; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center; }
+    .additive-item { text-align: center; }
+    .additive-item img { width: 64px; height: 64px; display: block; margin: 0 auto 0.5rem; }
+    .additive-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8; }
+    .arrow { font-size: 1.5rem; color: #e2e8f0; align-self: center; margin-top: -1rem; }
+
+    /* On dark */
+    .dark-preview { background: #080f22; border-radius: 16px; padding: 3rem; margin: 3rem 0; }
+    .dark-preview h3 { color: white; font-family: 'Cormorant Garamond', serif; margin-bottom: 2rem; text-align: center; font-size: 1.4rem; font-weight: 600; }
+    .dark-badge-row { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .dark-badge-item { text-align: center; }
+    .dark-badge-item img { width: 80px; height: 80px; display: block; margin: 0 auto 0.75rem; }
+    .dark-badge-item span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+
+    /* Sizes preview */
+    .sizes-row { display: flex; align-items: flex-end; gap: 2rem; flex-wrap: wrap; margin: 2rem 0; }
+    .size-item { text-align: center; }
+    .size-label { font-size: 0.7rem; color: #94a3b8; margin-top: 0.5rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #0D1B3D; margin-bottom: 0.5rem; }
+    h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: #0D1B3D; margin: 2.5rem 0 1rem; }
+    p { color: #64748b; font-size: 0.9rem; line-height: 1.7; margin-bottom: 1rem; }
+    .meta { font-size: 0.75rem; color: #94a3b8; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+<div class="badge-showcase">
+
+  <div style="margin-bottom:3rem">
+    <div class="meta">IPP — Digital Credentials</div>
+    <h2>Member Badge System</h2>
+    <p>Four tiers. Four badges. Each badge is additive: a new segment lights up with each progression. The globe fills as you advance. SVG format — infinitely scalable, suitable for LinkedIn, email signatures, and digital credentials.</p>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="badge-grid">
+    <div class="badge-card student">
+      <img src="assets/badge-student.png" alt="Student badge">
+      <div class="badge-name">Student</div>
+      <div class="badge-desig">No designation</div>
+      <div class="badge-desc">One segment lit. The beginning of the journey. Free membership, no qualification required.</div>
+    </div>
+    <div class="badge-card associate">
+      <img src="assets/badge-associate.png" alt="Associate badge">
+      <div class="badge-name">Associate</div>
+      <div class="badge-desig">AIPP</div>
+      <div class="badge-desc">Two segments lit. Foundation qualification held. First verified credential.</div>
+    </div>
+    <div class="badge-card member">
+      <img src="assets/badge-member.png" alt="Member badge">
+      <div class="badge-name">Member</div>
+      <div class="badge-desig">MIPP</div>
+      <div class="badge-desc">Three segments lit. Practising professional with documented experience and evidence portfolio.</div>
+    </div>
+    <div class="badge-card fellow">
+      <img src="assets/badge-fellow.png" alt="Fellow badge">
+      <div class="badge-name">Fellow</div>
+      <div class="badge-desig">FIPP</div>
+      <div class="badge-desc">All four segments lit. The complete globe. Senior, peer-reviewed, fully realised.</div>
+    </div>
+  </div>
+
+  <!-- PROGRESSION STRIP -->
+  <h3>The progression</h3>
+  <p>Each tier adds one segment. The visual story is immediately readable — no explanation needed.</p>
+  <div class="additive-row">
+    <div class="additive-item">
+      <img src="assets/badge-student.png" alt="Student">
+      <div class="additive-label">Student</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="additive-item">
+      <img src="assets/badge-associate.png" alt="Associate">
+      <div class="additive-label">Associate</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="additive-item">
+      <img src="assets/badge-member.png" alt="Member">
+      <div class="additive-label">Member</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="additive-item">
+      <img src="assets/badge-fellow.png" alt="Fellow">
+      <div class="additive-label">Fellow</div>
+    </div>
+  </div>
+
+  <!-- ON DARK BACKGROUND -->
+  <div class="dark-preview">
+    <h3>On dark backgrounds</h3>
+    <div class="dark-badge-row">
+      <div class="dark-badge-item">
+        <img src="assets/badge-student.png" alt="Student">
+        <span>Student</span>
+      </div>
+      <div class="dark-badge-item">
+        <img src="assets/badge-associate.png" alt="Associate">
+        <span>AIPP</span>
+      </div>
+      <div class="dark-badge-item">
+        <img src="assets/badge-member.png" alt="Member">
+        <span>MIPP</span>
+      </div>
+      <div class="dark-badge-item">
+        <img src="assets/badge-fellow.png" alt="Fellow">
+        <span>FIPP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIZE RANGE -->
+  <h3>Scales cleanly at any size</h3>
+  <p>SVG format means perfect rendering at any resolution — from 24px favicon to 400px credential header.</p>
+  <div class="sizes-row">
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:24px;height:24px;display:block">
+      <div class="size-label">24px</div>
+    </div>
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:40px;height:40px;display:block">
+      <div class="size-label">40px</div>
+    </div>
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:64px;height:64px;display:block">
+      <div class="size-label">64px</div>
+    </div>
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:96px;height:96px;display:block">
+      <div class="size-label">96px</div>
+    </div>
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:140px;height:140px;display:block">
+      <div class="size-label">140px</div>
+    </div>
+    <div class="size-item">
+      <img src="assets/badge-fellow.png" style="width:200px;height:200px;display:block">
+      <div class="size-label">200px</div>
+    </div>
+  </div>
+
+  <!-- COLOUR LEGEND -->
+  <h3>Colour system</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.5rem 0">
+    <div style="padding:1.25rem;background:white;border-radius:8px;border:1px solid #e2e8f0;text-align:center">
+      <div style="width:32px;height:32px;border-radius:50%;background:#0077B6;margin:0 auto 0.75rem"></div>
+      <div style="font-size:0.75rem;font-weight:700;color:#0077B6;letter-spacing:0.1em;text-transform:uppercase">Student</div>
+      <div style="font-size:0.7rem;color:#94a3b8;margin-top:0.25rem">#0077B6</div>
+    </div>
+    <div style="padding:1.25rem;background:white;border-radius:8px;border:1px solid #e2e8f0;text-align:center">
+      <div style="width:32px;height:32px;border-radius:50%;background:#7B1FA2;margin:0 auto 0.75rem"></div>
+      <div style="font-size:0.75rem;font-weight:700;color:#7B1FA2;letter-spacing:0.1em;text-transform:uppercase">Associate</div>
+      <div style="font-size:0.7rem;color:#94a3b8;margin-top:0.25rem">#7B1FA2</div>
+    </div>
+    <div style="padding:1.25rem;background:white;border-radius:8px;border:1px solid #e2e8f0;text-align:center">
+      <div style="width:32px;height:32px;border-radius:50%;background:#D7263D;margin:0 auto 0.75rem"></div>
+      <div style="font-size:0.75rem;font-weight:700;color:#D7263D;letter-spacing:0.1em;text-transform:uppercase">Member</div>
+      <div style="font-size:0.7rem;color:#94a3b8;margin-top:0.25rem">#D7263D</div>
+    </div>
+    <div style="padding:1.25rem;background:white;border-radius:8px;border:1px solid #e2e8f0;text-align:center">
+      <div style="width:32px;height:32px;border-radius:50%;background:#1E8E3E;margin:0 auto 0.75rem"></div>
+      <div style="font-size:0.75rem;font-weight:700;color:#1E8E3E;letter-spacing:0.1em;text-transform:uppercase">Fellow</div>
+      <div style="font-size:0.7rem;color:#94a3b8;margin-top:0.25rem">#1E8E3E</div>
+    </div>
+  </div>
+
+  <p style="margin-top:2rem;font-size:0.8rem;color:#94a3b8">
+    Each badge is a self-contained SVG file (~11KB). Colours are single-variable changes if you want to adjust. The progression from 1 to 4 lit segments is the consistent visual language across all IPP touchpoints.
+  </p>
+
+</div>
+</body>
+</html>
