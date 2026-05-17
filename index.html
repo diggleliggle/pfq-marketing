@@ -3,410 +3,658 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPP — Institute of Project Professionals</title>
-  <meta name="description" content="The professional body for project professionals who take their practice seriously.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Module Six — Building the infrastructure for project practitioners</title>
+  <meta name="description" content="Module Six builds the tools and credentials that help project practitioners develop, demonstrate, and advance their practice. Home of IPP, Activate, and Calibrate.">
+  <link rel="canonical" href="https://modulesix.co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Module Six">
+  <meta property="og:description" content="Building the infrastructure for project practitioners. Home of IPP, Activate, and Calibrate.">
+  <meta property="og:url" content="https://modulesix.co.uk/">
+  <meta property="og:site_name" content="Module Six">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Module Six">
+  <meta name="twitter:description" content="Building the infrastructure for project practitioners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0f1f3d;
+      --navy-mid:  #1a3260;
+      --teal:      #00B4C8;
+      --teal-dark: #0099aa;
+      --gold:      #C9A84C;
+      --cream:     #f7f4ee;
+      --white:     #ffffff;
+      --text:      #0f1f3d;
+      --muted:     #5a6175;
+      --border:    #e0dbd0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(15, 31, 61, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.18);
+      padding: 0 3rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .nav-wordmark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      color: var(--white);
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--teal) !important;
+      color: var(--navy) !important;
+      font-weight: 600 !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 5px;
+      font-size: 0.85rem !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-dark) !important;
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      padding: 9rem 3rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow-1 {
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,180,200,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: -150px; left: 10%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .eyebrow-line {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .eyebrow-text {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.13;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--teal);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.58);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 2.75rem;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.01em;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.4);
+      color: var(--white);
+    }
+
+    /* DIVIDER */
+    .gold-rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+      margin: 0;
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 6rem 3rem;
+      background: var(--cream);
+    }
+
+    .section-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-label-line {
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-label-text {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .section-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 0.875rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 0.975rem;
+      max-width: 500px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem 1.75rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-color);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 12px 40px rgba(15,31,61,0.1);
+      transform: translateY(-3px);
+      border-color: rgba(15,31,61,0.08);
+    }
+
+    .product-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .card-ipp   { --card-color: var(--gold); }
+    .card-act   { --card-color: var(--teal); }
+    .card-cal   { --card-color: #4CAF8C; }
+
+    .card-pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.55rem;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 0.2rem;
+    }
+
+    .pill-ipp { background: rgba(201,168,76,0.12); color: #8a6e1e; }
+    .pill-act { background: rgba(0,180,200,0.12); color: var(--teal-dark); }
+    .pill-cal { background: rgba(76,175,140,0.12); color: #2d8a68; }
+
+    .card-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .teal  { color: var(--teal); }
+    .green { color: #4CAF8C; }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      font-weight: 300;
+    }
+
+    .card-link {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .card-link svg {
+      width: 11px; height: 11px;
+      opacity: 0.45;
+      flex-shrink: 0;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--navy);
+      padding: 6rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-glow {
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(0,180,200,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .about .section-label-line  { background: var(--gold); }
+    .about .section-heading     { color: var(--white); }
+
+    .about-body {
+      max-width: 600px;
+    }
+
+    .about-body p {
+      color: rgba(255,255,255,0.62);
+      font-size: 0.975rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .about-body p + p { margin-top: 1.25rem; }
+
+    /* FOOTER */
+    footer {
+      background: #070d1a;
+      padding: 3.5rem 3rem 2.5rem;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .footer-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .footer-brand img {
+      width: 30px; height: 30px;
+      object-fit: contain;
+    }
+
+    .footer-brand-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .footer-tagline {
+      font-size: 0.825rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .footer-col-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.825rem;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+      font-weight: 300;
+    }
+
+    .footer-col a:hover { color: var(--white); }
+
+    .footer-base {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.775rem;
+      color: rgba(255,255,255,0.22);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero .eyebrow      { animation: fadeUp 0.55s 0.05s ease both; }
+    .hero h1            { animation: fadeUp 0.55s 0.15s ease both; }
+    .hero .hero-desc    { animation: fadeUp 0.55s 0.25s ease both; }
+    .hero .hero-actions { animation: fadeUp 0.55s 0.35s ease both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .hero, .products, .about { padding-left: 1.25rem; padding-right: 1.25rem; }
+      footer { padding: 2.5rem 1.25rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-<div id="password-gate">
-  <img src="assets/logo.png" alt="IPP" style="width:56px;height:56px">
-  <h2>IPP</h2>
-  <p>Private preview. Enter the password to continue.</p>
-  <form class="gate-form" id="gate-form">
-    <input type="password" id="gate-input" placeholder="Password" autocomplete="off">
-    <button type="submit">Enter</button>
-    <p class="gate-error" id="gate-error"></p>
-  </form>
-  <p class="gate-notice">Authorised reviewers only. Not yet publicly available.</p>
-</div>
-
-<div id="site-content" style="display:none">
-
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="assets/logo.png" alt="IPP" style="width:32px;height:32px;display:block">
-      <div class="nav-wordmark">
-        <span>IPP</span>
-        <span>Institute of Project Professionals</span>
-      </div>
+  <nav>
+    <a class="nav-logo" href="/">
+      <img src="assets/logo.png" alt="Module Six">
+      <span class="nav-wordmark">Module Six</span>
     </a>
     <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="membership.html">Membership</a></li>
-      <li><a href="qualifications.html">Qualifications</a></li>
-      <li><a href="employers.html">Employers</a></li>
-      <li><a href="governance.html">Governance</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html" class="nav-cta">Join IPP</a></li>
+      <li><a href="https://ipp.pro">IPP</a></li>
+      <li><a href="https://activate.ipp.pro">Activate</a></li>
+      <li><a href="/calibrate.html">Calibrate</a></li>
+      <li><a href="/courses.html">Courses</a></li>
+      <li><a href="https://ipp.pro/join.html" class="nav-cta">Join IPP</a></li>
     </ul>
-    <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-bg-text">IPP</div>
-  <div class="container hero-content">
-    <div style="max-width:740px">
-      <p class="eyebrow eyebrow-white">Institute of Project Professionals</p>
-      <h1 class="text-white" style="margin-bottom:2rem">The professional body for project<br><em style="color:var(--red);font-style:normal">professionals</em> who take their<br>practice seriously.</h1>
-      <div class="rule rule-white"></div>
-      <p style="color:rgba(255,255,255,0.5);font-size:1.05rem;max-width:540px;margin-bottom:3rem;line-height:1.8">Rigorous, evidence-based qualifications and a membership framework built around how project professionals actually work and develop. Not another exam factory.</p>
-      <div class="flex gap-3" style="flex-wrap:wrap;align-items:center">
-        <a href="join.html" class="btn btn-primary btn-lg">Join IPP</a>
-        <a href="about.html" class="btn btn-outline btn-lg">Learn more</a>
+  <section class="hero">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-inner">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Module Six Ltd</span>
+      </div>
+      <h1>Building the infrastructure for <em>project practitioners</em></h1>
+      <p class="hero-desc">We build the tools, credentials, and learning that help project practitioners develop their practice, demonstrate their competence, and advance their careers.</p>
+      <div class="hero-actions">
+        <a href="https://ipp.pro" class="btn btn-primary">Explore IPP</a>
+        <a href="https://activate.ipp.pro" class="btn btn-ghost">Start learning</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- COUNTER BAR -->
-<div class="counter-bar">
-  <div class="container">
-    <div class="counter-bar-inner">
-      <span class="counter-num" data-count="47">0</span>
-      <span>project professionals have already joined as founding members.</span>
-      <a href="join.html">Claim your place</a>
+  <div class="gold-rule"></div>
+
+  <section class="products">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span class="section-label-text">Our products</span>
+        </div>
+        <h2 class="section-heading">Four products, one ecosystem</h2>
+        <p class="section-intro">Each product is built to work alongside the others. One account, one login, one place to develop your practice.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <a href="https://ipp.pro" class="product-card card-ipp">
+          <span class="card-pill pill-ipp">Credentials</span>
+          <div class="card-name">IPP</div>
+          <p class="card-desc">The Institute of Project Practitioners. Professional membership, qualifications, and a directory of credentialed practitioners. Five tiers from Explorer to Fellow, with designations AIPP, MIPP, and FIPP.</p>
+          <div class="card-link">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ipp.pro
+          </div>
+        </a>
+
+        <a href="https://activate.ipp.pro" class="product-card card-act">
+          <span class="card-pill pill-act">Learning</span>
+          <div class="card-name">Acti<span class="teal">vate</span></div>
+          <p class="card-desc">A structured project management learning platform. Six modules, 75 topics, and a full Award pathway. Available on web and mobile. Content is gated by IPP membership tier.</p>
+          <div class="card-link">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            activate.ipp.pro
+          </div>
+        </a>
+
+        <a href="/calibrate.html" class="product-card card-cal">
+          <span class="card-pill pill-cal">CPD</span>
+          <div class="card-name">Cali<span class="green">brate</span></div>
+          <p class="card-desc">A competency and CPD tracking platform for project management teams. B2B and seat-licensed. Track evidence, manage development, and demonstrate capability across your organisation.</p>
+          <div class="card-link">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Learn more
+          </div>
+        </a>
+
+        <a href="/courses.html" class="product-card" style="border-color:rgba(201,168,76,0.18);background:linear-gradient(135deg,rgba(201,168,76,0.06) 0%,rgba(15,31,61,0.4) 100%)">
+          <span class="card-pill" style="background:rgba(201,168,76,0.15);color:#C9A84C">Courses</span>
+          <div class="card-name" style="color:var(--white)">Short <span style="color:#C9A84C">courses</span></div>
+          <p class="card-desc">IPP-accredited standalone courses for professionals who want practical development without a full qualification pathway. Pay once, learn at your own pace.</p>
+          <div class="card-link">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Browse courses
+          </div>
+        </a>
+
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- PROBLEM STATEMENT -->
-<section class="section dark">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center">
+  <div class="gold-rule"></div>
+
+  <section class="about">
+    <div class="about-glow"></div>
+    <div class="section-inner">
+      <div class="section-label" style="margin-bottom:1rem;">
+        <div class="section-label-line"></div>
+        <span class="section-label-text" style="color:var(--gold);">About us</span>
+      </div>
+      <h2 class="section-heading" style="margin-bottom:1.75rem;">Who we are</h2>
+      <div class="about-body">
+        <p>Module Six is a UK company building professional infrastructure for project practitioners. We created IPP, Activate, and Calibrate because the existing options in the market were either too rigid, too expensive, or too disconnected from how practitioners actually work.</p>
+        <p>Our products share a single platform. One account gives a practitioner access to their learning, their credentials, and their CPD record. Organisations using Calibrate can connect their team's development directly to the qualifications their practitioners hold through IPP.</p>
+        <p>We are based in the UK and focused on building something practitioners genuinely want to use.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
       <div>
-        <p class="eyebrow eyebrow-white">The problem</p>
-        <h2 class="text-white" style="margin-bottom:2rem">The existing landscape is not good enough.</h2>
-        <div class="rule"></div>
-        <p style="margin-bottom:1.5rem">Qualifications that test recall under exam conditions. Credentials that tell an employer what you knew five years ago. Professional bodies that collect a fee and issue a card.</p>
-        <p>Project management as a discipline deserves better. IPP is built to provide it.</p>
-        <a href="about.html" class="btn btn-ghost mt-4" style="color:var(--red)">Our approach</a>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.06);border-radius:var(--radius-lg);overflow:hidden">
-        <div style="background:var(--navy-mid);padding:2rem 2.5rem">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.75rem">The old model</div>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.5);margin:0">Sit an exam. Get a certificate. Pay your annual fee. Credential never updates.</p>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Module Six">
+          <span class="footer-brand-name">Module Six</span>
         </div>
-        <div style="background:var(--navy-mid);padding:2rem 2.5rem;border-left:3px solid var(--red)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem">The IPP model</div>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin:0">Evidence-based assessment. Designation that reflects where you are today. Membership that actively supports your development.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STAT STRIP -->
-<div class="dark">
-  <div class="container" style="padding:0 2.5rem">
-    <div class="stat-strip">
-      <div class="stat-item reveal">
-        <span class="stat-num">4<span class="stat-accent">.</span></span>
-        <span class="stat-label">Qualification levels from Foundation to Chartered</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <span class="stat-num">3</span>
-        <span class="stat-label">Integrated products: Activate, Calibrate, IPP</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <span class="stat-num">500</span>
-        <span class="stat-label">Founding member places available. <span data-count="47" style="color:var(--red)">47</span> taken.</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <span class="stat-num">£<span class="stat-accent">0</span></span>
-        <span class="stat-label">To get started. Student membership is free.</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- THREE PILLARS -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:360px 1fr;gap:6rem;align-items:start">
-      <div style="position:sticky;top:7rem">
-        <p class="eyebrow">How it works</p>
-        <h2 style="margin-bottom:1.5rem">Learn. Qualify. Develop.</h2>
-        <div class="rule"></div>
-        <p>Three connected products. One professional pathway. Each reinforces the others. Your progress in one updates your record in all.</p>
-        <a href="qualifications.html" class="btn btn-primary mt-4">See qualifications</a>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:0">
-        <div style="padding:3rem 0;border-bottom:1px solid var(--grey-200)" class="reveal">
-          <div style="display:flex;gap:2rem;align-items:flex-start">
-            <div class="step-num">01</div>
-            <div>
-              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
-                <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue)">Activate</span>
-                <span style="width:24px;height:1px;background:var(--grey-200)"></span>
-                <span style="font-size:0.7rem;color:var(--grey-400)">Learn</span>
-              </div>
-              <h3 style="margin-bottom:1rem">Structured learning built around genuine understanding.</h3>
-              <p style="margin-bottom:1.25rem">75 topics across 6 modules. Written as a knowledgeable practitioner would explain it, not as a textbook would present it. Prepares you for IPP qualifications and makes you more effective in practice, simultaneously.</p>
-              <a href="https://activate.modulesix.co.uk" style="font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue)">Visit Activate →</a>
-            </div>
-          </div>
-        </div>
-        <div style="padding:3rem 0;border-bottom:1px solid var(--grey-200)" class="reveal">
-          <div style="display:flex;gap:2rem;align-items:flex-start">
-            <div class="step-num">02</div>
-            <div>
-              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
-                <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red)">IPP</span>
-                <span style="width:24px;height:1px;background:var(--grey-200)"></span>
-                <span style="font-size:0.7rem;color:var(--grey-400)">Qualify</span>
-              </div>
-              <h3 style="margin-bottom:1rem">Evidence-based qualifications that reflect what you can do.</h3>
-              <p style="margin-bottom:1.25rem">From Foundation Certificate to Advanced. Every level combines formal assessment with real project evidence. The result is a credential that tells an employer something meaningful: not just what you knew when you sat an exam.</p>
-              <a href="qualifications.html" style="font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--red)">View qualifications →</a>
-            </div>
-          </div>
-        </div>
-        <div style="padding:3rem 0" class="reveal">
-          <div style="display:flex;gap:2rem;align-items:flex-start">
-            <div class="step-num">03</div>
-            <div>
-              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
-                <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple)">Calibrate</span>
-                <span style="width:24px;height:1px;background:var(--grey-200)"></span>
-                <span style="font-size:0.7rem;color:var(--grey-400)">Develop</span>
-              </div>
-              <h3 style="margin-bottom:1rem">A professional record that compounds over time.</h3>
-              <p style="margin-bottom:1.25rem">Track competency and CPD across 41 elements in 8 areas. Build an evidence portfolio from real project work. Log development conversations with your line manager. Your Calibrate profile supports your IPP membership and updates your directory listing automatically.</p>
-              <a href="https://calibrate.modulesix.co.uk" style="font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple)">Visit Calibrate →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MEMBERSHIP TIERS -->
-<section class="section light">
-  <div class="container">
-    <div style="text-align:center;max-width:520px;margin:0 auto 4rem">
-      <p class="eyebrow" style="justify-content:center">Membership</p>
-      <h2>Find your level.</h2>
-      <p class="mt-2">IPP membership is open to project professionals at every stage of their career. Every tier delivers clear, tangible value.</p>
-    </div>
-    <div class="grid-4">
-      <div class="tier-card reveal">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-400);margin-bottom:1.5rem">Student</div>
-        <div class="tier-price">Free</div>
-        <div class="tier-desig">No designation</div>
-        <div style="height:1px;background:var(--grey-100);margin:1.5rem 0"></div>
-        <ul class="feature-list mb-3">
-          <li>Digital student badge</li>
-          <li>Community access</li>
-          <li>Resource library</li>
-          <li>Event access</li>
-        </ul>
-        <a href="join.html" class="btn btn-outline-dark w-full" style="justify-content:center;margin-top:auto">Join free</a>
-      </div>
-      <div class="tier-card reveal reveal-delay-1">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.5rem">Associate</div>
-        <div class="tier-price">£29<sub>/yr</sub></div>
-        <div class="tier-desig">AIPP after your name</div>
-        <div style="height:1px;background:var(--grey-100);margin:1.5rem 0"></div>
-        <ul class="feature-list mb-3">
-          <li>Verified digital credential</li>
-          <li>Member directory listing</li>
-          <li>Full resource library</li>
-          <li>CPD tools via Calibrate</li>
-        </ul>
-        <a href="join.html" class="btn btn-outline-dark w-full" style="justify-content:center">Join</a>
-      </div>
-      <div class="tier-card featured reveal reveal-delay-2" style="position:relative">
-        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--red);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.875rem;border-radius:0 0 4px 4px">Most popular</div>
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;margin-top:0.75rem">Member</div>
-        <div class="tier-price">£69<sub>/yr</sub></div>
-        <div class="tier-desig">MIPP after your name</div>
-        <div style="height:1px;background:rgba(215,38,61,0.15);margin:1.5rem 0"></div>
-        <ul class="feature-list mb-3">
-          <li>Calibrate access included</li>
-          <li>Priority directory listing</li>
-          <li>Mentoring network</li>
-          <li>Voting rights in IPP</li>
-          <li>Full resource library</li>
-        </ul>
-        <a href="join.html" class="btn btn-primary w-full" style="justify-content:center">Join</a>
-      </div>
-      <div class="tier-card reveal reveal-delay-3">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem">Fellow</div>
-        <div class="tier-price">£129<sub>/yr</sub></div>
-        <div class="tier-desig">FIPP after your name</div>
-        <div style="height:1px;background:var(--grey-100);margin:1.5rem 0"></div>
-        <ul class="feature-list mb-3">
-          <li>Peer-reviewed status</li>
-          <li>Governance involvement</li>
-          <li>Calibrate included</li>
-          <li>Working group access</li>
-        </ul>
-        <a href="join.html" class="btn btn-outline-dark w-full" style="justify-content:center">Apply</a>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--grey-400)">
-      <a href="membership.html" style="color:var(--red)">Compare all tiers in detail →</a>
-    </p>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:280px 1fr;gap:6rem;align-items:start">
-      <div style="position:sticky;top:7rem">
-        <p class="eyebrow">What members say</p>
-        <h2 style="margin-bottom:1.5rem">From the founding cohort.</h2>
-        <div class="rule"></div>
-        <p style="font-size:0.8rem;color:var(--grey-400);margin-top:1rem">Illustrative testimonials for preview. Real member quotes replace these at launch.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1.5rem">
-        <div class="testimonial reveal">
-          <p class="testimonial-quote">"The content prepared me for real project situations, not just exam questions. That distinction matters when you are back in the office on Monday morning."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SM</div>
-            <div><span class="testimonial-name">Sarah Mitchell <span style="color:var(--red);font-size:0.7rem;font-weight:700;letter-spacing:0.08em">MIPP</span></span><span class="testimonial-role">Project Manager, Infrastructure</span></div>
-          </div>
-        </div>
-        <div class="testimonial reveal reveal-delay-1">
-          <p class="testimonial-quote">"IPP feels different because the evidence portfolio means my credential reflects where I am now, not where I was five years ago when I sat my last exam."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">JO</div>
-            <div><span class="testimonial-name">James Okafor <span style="color:var(--gold);font-size:0.7rem;font-weight:700;letter-spacing:0.08em">FIPP</span></span><span class="testimonial-role">Programme Director</span></div>
-          </div>
-        </div>
-        <div class="testimonial reveal reveal-delay-2">
-          <p class="testimonial-quote">"Accessible does not have to mean shallow. The Foundation assessment was genuinely rigorous. I felt like I had earned it."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">ER</div>
-            <div><span class="testimonial-name">Emma Reynolds <span style="color:var(--blue);font-size:0.7rem;font-weight:700;letter-spacing:0.08em">AIPP</span></span><span class="testimonial-role">PMO Lead</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ORGANISATIONS -->
-<section class="section-sm light">
-  <div class="container">
-    <p style="text-align:center;font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--grey-400);margin-bottom:2.5rem">Organisations we work with</p>
-    <div class="carousel-wrap">
-      <div class="carousel-track">
-        <div class="logo-item"><div class="logo-pill"><span>Organisation A</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation B</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation C</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation D</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation E</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation F</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation A</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation B</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation C</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation D</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation E</span></div></div>
-        <div class="logo-item"><div class="logo-pill"><span>Organisation F</span></div></div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:1.5rem;font-size:0.75rem;color:var(--grey-400)">Partner logos replace placeholders as organisational relationships are confirmed.</p>
-  </div>
-</section>
-
-<!-- EMPLOYER STRIP -->
-<section class="section dark">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center">
-      <div>
-        <p class="eyebrow eyebrow-white">For employers</p>
-        <h2 class="text-white" style="margin-bottom:1.5rem">Hiring project professionals? An IPP designation tells you three things.</h2>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem">
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--red);line-height:1;margin-bottom:0.5rem">01</div>
-            <p style="font-size:0.825rem">Verified qualification, assessed to a published standard.</p>
-          </div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--red);line-height:1;margin-bottom:0.5rem">02</div>
-            <p style="font-size:0.825rem">Current CPD. The designation lapses if development stops.</p>
-          </div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--red);line-height:1;margin-bottom:0.5rem">03</div>
-            <p style="font-size:0.825rem">Evidence portfolio from real project work, not just exam recall.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <a href="employers.html" class="btn btn-outline btn-lg" style="white-space:nowrap">Employer information</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDING CTA -->
-<section class="section" style="background:var(--cream)">
-  <div class="container" style="text-align:center;max-width:640px;margin:0 auto">
-    <p class="eyebrow" style="justify-content:center">Founding membership</p>
-    <h2 style="margin-bottom:1rem">Be part of something that raises the standard.</h2>
-    <div class="rule rule-center"></div>
-    <p style="max-width:460px;margin:0 auto 2.5rem">Founding member status is permanent and closes at 500. <strong style="color:var(--navy)" data-count="47">47</strong> project professionals have already joined.</p>
-    <a href="join.html" class="btn btn-primary btn-lg">Claim founding membership</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="flex gap-2" style="align-items:center">
-          <img src="assets/logo.png" alt="IPP" style="width:32px;height:32px;display:block">
-          <span style="font-family:'Cormorant Garamond',serif;color:var(--white);font-size:1.25rem;font-weight:700;letter-spacing:0.08em">IPP</span>
-        </div>
-        <p>The Institute of Project Professionals. Setting the standard for project practice. Developed by Module Six Ltd.</p>
+        <p class="footer-tagline">Building the infrastructure<br>for project practitioners.</p>
       </div>
       <div class="footer-col">
-        <h5>Membership</h5>
-        <ul>
-          <li><a href="membership.html">Student</a></li>
-          <li><a href="membership.html">Associate (AIPP)</a></li>
-          <li><a href="membership.html">Member (MIPP)</a></li>
-          <li><a href="membership.html">Fellow (FIPP)</a></li>
-          <li><a href="join.html">Join IPP</a></li>
-        </ul>
+        <p class="footer-col-label">Products</p>
+        <a href="https://ipp.pro">IPP</a>
+        <a href="https://activate.ipp.pro">Activate</a>
+        <a href="https://calibrate.ipp.pro">Calibrate</a>
+        <a href="/courses.html">Courses</a>
       </div>
       <div class="footer-col">
-        <h5>Qualifications</h5>
-        <ul>
-          <li><a href="qualifications.html">Foundation</a></li>
-          <li><a href="qualifications.html">Practitioner</a></li>
-          <li><a href="qualifications.html">Advanced</a></li>
-          <li><a href="qualifications.html">Chartered (ChPP)</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>IPP</h5>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="governance.html">Governance</a></li>
-          <li><a href="employers.html">For Employers</a></li>
-          <li><a href="directory.html">Member Directory</a></li>
-          <li><a href="mailto:hello@modulesix.co.uk">Contact</a></li>
-        </ul>
+        <p class="footer-col-label">Get started</p>
+        <a href="https://ipp.pro/join.html">Join IPP</a>
+        <a href="https://activate.ipp.pro">Start learning</a>
+        <a href="/calibrate.html">Calibrate for teams</a>
+        <a href="/courses.html">Browse courses</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Institute of Project Professionals. Developed by Module Six Ltd. Registered in England and Wales.</p>
-      <p>IPP is not affiliated with or endorsed by APM, PMI, or AXELOS.</p>
+    <div class="footer-base">
+      Module Six Ltd. Registered in England and Wales. modulesix.co.uk
     </div>
-  </div>
-</footer>
+  </footer>
 
-</div>
-<script src="js/main.js"></script>
 </body>
 </html>

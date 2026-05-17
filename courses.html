@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses — Module Six</title>
+  <meta name="description" content="Professional development courses from Module Six. IPP-accredited short courses for working professionals." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0f2744;
+      --ink:     #1a3a5c;
+      --mid:     #2d5a8e;
+      --sky:     #4a90d9;
+      --pale:    #e8f1fb;
+      --white:   #ffffff;
+      --offwhite:#f7f9fc;
+      --text:    #1c2b3a;
+      --muted:   #64748b;
+      --border:  #d1dce9;
+      --green:   #1a7a4a;
+      --font-head: 'Georgia', 'Times New Roman', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius: 8px;
+      --shadow: 0 2px 12px rgba(15,39,68,0.10);
+      --shadow-lg: 0 8px 32px rgba(15,39,68,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--offwhite);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Nav — matches index.html ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(15, 31, 61, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.18);
+      padding: 0 3rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+    .nav-logo img { width: 34px; height: 34px; object-fit: contain; }
+    .nav-wordmark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      color: #ffffff;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #ffffff; }
+    .nav-cta {
+      background: #00B4C8 !important;
+      color: #0f1f3d !important;
+      font-weight: 600 !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 5px;
+      font-size: 0.85rem !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: #0099aa !important; transform: translateY(-1px); }
+
+        /* ── Hero ─────────────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--ink) 100%);
+      padding: 120px 32px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(74,144,217,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(74,144,217,0.08) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--sky);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 680px;
+      margin: 0 auto 16px;
+      line-height: 1.25;
+    }
+    .hero p {
+      font-size: 17px;
+      color: #a8c4e0;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Main content ─────────────────────────────────────────────────── */
+    .main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── Course card ──────────────────────────────────────────────────── */
+    .course-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .course-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+    }
+
+    .course-body {
+      padding: 40px;
+      border-right: 1px solid var(--border);
+    }
+
+    .course-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--mid);
+      background: var(--pale);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .course-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sky);
+      display: block;
+    }
+
+    .course-body h2 {
+      font-family: var(--font-head);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .course-body .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .meta-item svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    .course-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+
+    .what-youll-learn h3 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .learn-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    .learn-list li {
+      font-size: 14px;
+      color: var(--text);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .learn-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* ── Purchase panel ───────────────────────────────────────────────── */
+    .purchase-panel {
+      padding: 40px 32px;
+      background: var(--offwhite);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .price-display {
+      margin-bottom: 6px;
+    }
+    .price-amount {
+      font-family: var(--font-head);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .price-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+
+    .purchase-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--ink);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      position: relative;
+      font-family: var(--font-body);
+    }
+    .purchase-btn:hover:not(:disabled) {
+      background: var(--navy);
+      transform: translateY(-1px);
+    }
+    .purchase-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .purchase-btn.enrolled {
+      background: var(--green);
+    }
+
+    .purchase-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .purchase-note a {
+      color: var(--mid);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── B2B panel ── */
+    .b2b-divider { width:100%; text-align:center; border-bottom:1px solid var(--border); line-height:0.1em; margin:24px 0 16px; color:var(--muted); font-size:12px; }
+    .b2b-divider span { background:var(--offwhite); padding:0 10px; }
+    .b2b-toggle-btn { background:none; border:none; color:var(--mid); font-size:13px; font-weight:600; cursor:pointer; text-decoration:underline; text-underline-offset:2px; padding:0; font-family:var(--font-body); }
+    .b2b-toggle-btn:hover { color:var(--navy); }
+    .b2b-panel { display:none; width:100%; text-align:left; margin-top:16px; }
+    .b2b-panel.open { display:block; }
+    .b2b-panel label { display:block; font-size:12px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:5px; margin-top:12px; }
+    .b2b-panel input[type="email"], .b2b-panel input[type="number"] { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:7px; font-size:14px; color:var(--text); background:var(--white); font-family:var(--font-body); box-sizing:border-box; }
+    .b2b-panel input:focus { outline:2px solid var(--sky); border-color:transparent; }
+    .b2b-org-confirm { font-size:13px; color:var(--green); font-weight:600; margin-top:6px; min-height:20px; }
+    .b2b-org-confirm.error { color:#c0392b; font-weight:400; }
+    .b2b-price-display { margin-top:12px; padding:12px; background:var(--pale); border-radius:8px; font-size:13px; color:var(--ink); line-height:1.5; min-height:42px; }
+    .b2b-price-display strong { color:var(--navy); font-size:15px; }
+    .b2b-submit-btn { width:100%; padding:13px 20px; background:var(--mid); color:var(--white); border:none; border-radius:var(--radius); font-size:15px; font-weight:600; cursor:pointer; transition:background 0.15s, transform 0.1s; font-family:var(--font-body); margin-top:14px; }
+    .b2b-submit-btn:hover:not(:disabled) { background:var(--navy); transform:translateY(-1px); }
+    .b2b-submit-btn:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+    .b2b-alert { font-size:13px; color:#c0392b; margin-top:8px; min-height:18px; }
+
+    .divider-text {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      line-height: 0.1em;
+      margin: 20px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .divider-text span {
+      background: var(--offwhite);
+      padding: 0 10px;
+    }
+
+    .trust-items {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .trust-item svg {
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--green);
+    }
+
+    /* sign-in nudge */
+    .signin-nudge {
+      background: var(--pale);
+      border: 1px solid #b8d4f0;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .signin-nudge a {
+      color: var(--mid);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* alert */
+    .alert {
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .alert.error { background: #fef2f2; border: 1px solid #fca5a5; color: #7f1d1d; }
+    .alert.info  { background: var(--pale); border: 1px solid #b8d4f0; color: var(--ink); }
+    .alert.show  { display: block; }
+
+    /* ── FAQ / more context ───────────────────────────────────────────── */
+    .context-section {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .context-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .context-card h3 {
+      font-family: var(--font-head);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .context-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .context-card p + p { margin-top: 10px; }
+
+    /* ── Footer ───────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--navy);
+      color: #a8c4e0;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    .footer a { color: #7ab3e8; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .course-card-inner { grid-template-columns: 1fr; }
+      .course-body { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 24px; }
+      .purchase-panel { padding: 28px 24px; }
+      .learn-list { grid-template-columns: 1fr; }
+      .context-section { grid-template-columns: 1fr; }
+      .hero { padding: 48px 24px 40px; }
+      .nav-links { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav>
+    <a class="nav-logo" href="/">
+      <img src="assets/logo.png" alt="Module Six">
+      <span class="nav-wordmark">Module Six</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://ipp.pro">IPP</a></li>
+      <li><a href="https://activate.ipp.pro">Activate</a></li>
+      <li><a href="/calibrate.html">Calibrate</a></li>
+      <li><a href="https://ipp.pro/join.html" class="nav-cta">Join IPP</a></li>
+    </ul>
+  </nav>
+
+    <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-label">Professional development</div>
+    <h1>Courses</h1>
+    <p>Specialist short courses developed by practitioners.<br>Accredited by the Institute of Project Professionals.</p>
+  </section>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- Course card -->
+    <div class="course-card">
+      <div class="course-card-inner">
+
+        <!-- Left: course detail -->
+        <div class="course-body">
+          <div class="course-tag">New course</div>
+          <h2>PM for Non-Project Managers</h2>
+          <p class="subtitle">
+            A practical, applied course for professionals who lead or contribute to projects without a formal
+            project management background. Covers the tools, language, and techniques that matter in real work.
+          </p>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              4 modules
+            </div>
+            <div class="meta-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              Self-paced
+            </div>
+            <div class="meta-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              IPP-accredited
+            </div>
+            <div class="meta-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              Certificate on completion
+            </div>
+          </div>
+
+          <hr class="course-divider" />
+
+          <div class="what-youll-learn">
+            <h3>What you'll learn</h3>
+            <ul class="learn-list">
+              <li>What project management actually is</li>
+              <li>Scoping and defining work</li>
+              <li>Planning and scheduling basics</li>
+              <li>Managing stakeholders</li>
+              <li>Risk and issue management</li>
+              <li>Running effective meetings</li>
+              <li>Tracking progress and reporting</li>
+              <li>Closing projects well</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: purchase panel -->
+        <div class="purchase-panel">
+          <div class="price-display">
+            <div class="price-amount">£29.99</div>
+          </div>
+          <div class="price-sub">One-time purchase · Lifetime access</div>
+
+          <div id="alertBox" class="alert"></div>
+          <div id="signinNudge" class="signin-nudge" style="display:none">
+            <a href="#" id="signinLink">Sign in</a> to purchase, or
+            <a href="#" id="signupLink">create a free account</a> first.
+          </div>
+
+          <button id="purchaseBtn" class="purchase-btn" disabled>
+            <span id="purchaseBtnText">Loading…</span>
+          </button>
+
+          <p class="purchase-note">
+            Secure checkout via Stripe.<br />
+            Access granted instantly on payment.
+          </p>
+
+          <div class="divider-text"><span>Includes</span></div>
+
+          <div class="trust-items">
+            <div class="trust-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All 4 modules with audio
+            </div>
+            <div class="trust-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Completion certificate
+            </div>
+            <div class="trust-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Lifetime access — revisit any time
+            </div>
+            <div class="trust-item">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Works on desktop and mobile
+            </div>
+          </div>
+
+          <!-- ── B2B team purchase ── -->
+          <div class="b2b-divider"><span>Or buy for your team</span></div>
+          <div style="text-align:center">
+            <button class="b2b-toggle-btn" id="b2bToggle" onclick="toggleB2b()">Buying for your team?</button>
+            <p style="margin:6px 0 0;font-size:12px;color:var(--muted)">Volume discounts apply — up to 50% off</p>
+          </div>
+
+          <div class="b2b-panel" id="b2bPanel">
+            <label for="b2bEmail">Your work email</label>
+            <input type="email" id="b2bEmail" placeholder="you@company.com" oninput="clearB2bOrg()" onblur="lookupOrg()">
+            <div class="b2b-org-confirm" id="b2bOrgConfirm"></div>
+
+            <label for="b2bSeats">Number of seats</label>
+            <input type="number" id="b2bSeats" min="1" value="5" oninput="updateB2bPrice()">
+
+            <div class="b2b-price-display" id="b2bPriceDisplay">Enter a seat count to see pricing.</div>
+            <div class="b2b-alert" id="b2bAlert"></div>
+
+            <button class="b2b-submit-btn" id="b2bSubmitBtn" disabled onclick="startB2bCheckout()">
+              <span id="b2bSubmitText">Buy seats</span>
+            </button>
+            <p class="purchase-note" style="margin-top:10px">
+              Secure checkout via Stripe. Access is permanent per assigned user.<br>
+              Seats are allocated from your Calibrate admin panel after purchase.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Context cards -->
+    <div class="context-section">
+      <div class="context-card">
+        <h3>Who is this for?</h3>
+        <p>
+          Anyone who finds themselves managing projects without having trained as a project manager.
+          HR professionals, finance leads, marketing managers, operations staff — people who need
+          the language and tools of project management to do their job better.
+        </p>
+        <p>
+          No prior PM knowledge assumed. The course is practical and immediately applicable.
+        </p>
+      </div>
+      <div class="context-card">
+        <h3>Accreditation</h3>
+        <p>
+          This course is developed and accredited by the Institute of Project Professionals (IPP).
+          On completion you receive a certificate you can share on LinkedIn or with your employer.
+        </p>
+        <p>
+          The course counts toward IPP CPD requirements for members at all tiers.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <p>Module Six Ltd &nbsp;·&nbsp; Registered in England &amp; Wales
+    &nbsp;·&nbsp; <a href="mailto:hello@ipp.pro">hello@ipp.pro</a>
+    &nbsp;·&nbsp; <a href="https://ipp.pro" target="_blank" rel="noopener">ipp.pro</a></p>
+  </footer>
+
+  <script>
+    // ── Clerk + purchase flow ──────────────────────────────────────────────────
+    const API = 'https://calibrate-api.jd-393.workers.dev';
+
+    const btn         = document.getElementById('purchaseBtn');
+    const btnText     = document.getElementById('purchaseBtnText');
+    const alertBox    = document.getElementById('alertBox');
+    const signinNudge = document.getElementById('signinNudge');
+
+    function showAlert(msg, type = 'error') {
+      alertBox.textContent = msg;
+      alertBox.className = `alert ${type} show`;
+    }
+    function clearAlert() {
+      alertBox.className = 'alert';
+    }
+    function setLoading(loading) {
+      btn.disabled = loading;
+      btnText.textContent = loading ? 'Please wait…' : btn.dataset.label;
+    }
+
+    // ── Individual purchase ────────────────────────────────────────────────────
+    // Clerk cannot run on modulesix.co.uk (wrong domain). The purchase flow
+    // sends the user to activate.ipp.pro where Clerk is authoritative.
+    // activate.ipp.pro/signin.html handles auth then redirects to checkout.
+    function init() {
+      btn.disabled = false;
+      btn.dataset.label = 'Purchase — £29.99';
+      btnText.textContent = 'Purchase — £29.99';
+      btn.onclick = startCheckout;
+    }
+
+    function startCheckout() {
+      // Send to activate.ipp.pro. The signin/signup page there will complete
+      // Clerk auth and then initiate the Stripe checkout for PMNPM.
+      const returnUrl = encodeURIComponent('https://activate.ipp.pro/pmnpm-checkout.html');
+      window.location.href = `https://activate.ipp.pro/signin.html?redirect=${returnUrl}`;
+    }
+
+    // Hide the sign-in nudge — not needed now that we redirect
+    if (signinNudge) signinNudge.style.display = 'none';
+
+    // ── B2B team purchase ──────────────────────────────────────────────────────
+    // Phase 6: Calibrate org path (org lookup → b2b-checkout)
+    // Phase 7: Open B2B path (email + seats → open-b2b-checkout, no org needed)
+    let b2bTenantId = null;
+    let b2bOrgName  = null;
+    let b2bLookedUp = false;
+    let b2bMode     = 'open'; // 'calibrate' | 'open'
+
+    function toggleB2b() {
+      const panel  = document.getElementById('b2bPanel');
+      const toggle = document.getElementById('b2bToggle');
+      const open   = panel.classList.toggle('open');
+      toggle.textContent = open ? 'Hide team purchase' : 'Buying for your team?';
+      if (open) updateB2bPrice();
+    }
+
+    function b2bPricePerSeat(n) {
+      if (n >= 50) return 14.99;
+      if (n >= 10) return 19.99;
+      return 24.99;
+    }
+
+    function updateB2bPrice() {
+      const seats   = parseInt(document.getElementById('b2bSeats').value, 10);
+      const display = document.getElementById('b2bPriceDisplay');
+      const submit  = document.getElementById('b2bSubmitBtn');
+
+      if (!seats || seats < 1) {
+        display.innerHTML = 'Enter a seat count to see pricing.';
+        submit.disabled = true;
+        return;
+      }
+
+      const pps   = b2bPricePerSeat(seats);
+      const total = (pps * seats).toFixed(2);
+      const tier  = seats >= 50 ? 'enterprise rate' : seats >= 10 ? 'team rate' : 'standard rate';
+      display.innerHTML = `<strong>${seats} seat${seats > 1 ? 's' : ''} &times; &pound;${pps.toFixed(2)} = &pound;${total}</strong><br><span style="color:var(--muted);font-size:12px">${tier} &middot; one-time payment &middot; lifetime access per user</span>`;
+
+      const email  = (document.getElementById('b2bEmail').value || '').trim();
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (b2bMode === 'calibrate') {
+        submit.disabled = !(b2bTenantId && seats >= 1);
+      } else {
+        submit.disabled = !(emailOk && seats >= 1);
+      }
+    }
+
+    function clearB2bOrg() {
+      b2bTenantId = null;
+      b2bOrgName  = null;
+      b2bLookedUp = false;
+      b2bMode     = 'open';
+      document.getElementById('b2bOrgConfirm').textContent = '';
+      document.getElementById('b2bOrgConfirm').className   = 'b2b-org-confirm';
+      document.getElementById('b2bSubmitBtn').disabled     = true;
+    }
+
+    async function lookupOrg() {
+      const email   = document.getElementById('b2bEmail').value.trim();
+      const confirm = document.getElementById('b2bOrgConfirm');
+      if (!email) return;
+
+      // Reset mode each time email changes
+      b2bMode     = 'open';
+      b2bTenantId = null;
+      b2bLookedUp = false;
+
+      confirm.textContent = 'Looking up your organisation…';
+      confirm.className   = 'b2b-org-confirm';
+
+      try {
+        const res  = await fetch(`${API}/pmnpm/org-lookup?email=${encodeURIComponent(email)}`);
+        const data = await res.json();
+
+        if (res.ok && data.tenant_id) {
+          // Calibrate org found — use Phase 6 path
+          b2bTenantId = data.tenant_id;
+          b2bOrgName  = data.org_name;
+          b2bLookedUp = true;
+          b2bMode     = 'calibrate';
+          confirm.textContent = `✓ ${data.org_name}`;
+          confirm.className   = 'b2b-org-confirm';
+        } else {
+          // No Calibrate org — fall through to open B2B (Phase 7)
+          b2bMode = 'open';
+          confirm.textContent = 'No Calibrate organisation found — codes will be sent to your email.';
+          confirm.className   = 'b2b-org-confirm';
+        }
+        updateB2bPrice();
+      } catch (e) {
+        confirm.textContent = 'Could not verify organisation. Codes will be sent to your email.';
+        confirm.className   = 'b2b-org-confirm';
+        b2bMode = 'open';
+        updateB2bPrice();
+      }
+    }
+
+    async function startB2bCheckout() {
+      const alertEl  = document.getElementById('b2bAlert');
+      const submit   = document.getElementById('b2bSubmitBtn');
+      const submitTx = document.getElementById('b2bSubmitText');
+      const seats    = parseInt(document.getElementById('b2bSeats').value, 10);
+      const email    = document.getElementById('b2bEmail').value.trim();
+
+      alertEl.textContent  = '';
+      submit.disabled      = true;
+      submitTx.textContent = 'Please wait…';
+
+      try {
+        let endpoint, body;
+
+        if (b2bMode === 'calibrate' && b2bTenantId) {
+          // Phase 6: Calibrate org B2B
+          endpoint = `${API}/pmnpm/b2b-checkout`;
+          body     = { seat_count: seats, tenant_id: b2bTenantId, buyer_email: email };
+        } else {
+          // Phase 7: Open B2B — no org, codes delivered by email
+          endpoint = `${API}/pmnpm/open-b2b-checkout`;
+          body     = { seat_count: seats, buyer_email: email };
+        }
+
+        const res  = await fetch(endpoint, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(body),
+        });
+        const data = await res.json();
+
+        if (!res.ok || !data.url) {
+          alertEl.textContent  = data.error || 'Something went wrong. Please try again.';
+          submit.disabled      = false;
+          submitTx.textContent = 'Buy seats';
+          return;
+        }
+
+        window.location.href = data.url;
+      } catch (e) {
+        alertEl.textContent  = 'Could not connect. Please check your connection and try again.';
+        submit.disabled      = false;
+        submitTx.textContent = 'Buy seats';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
